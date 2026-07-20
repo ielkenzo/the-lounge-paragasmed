@@ -12,15 +12,154 @@
   <link rel="apple-touch-icon" href="assets/icon-192.png" />
   <title>The Lounge by ParagasMed</title>
   <style>
-    :root{--navy:#071a33;--navy2:#0d294e;--gold:#d9b15f;--gold2:#f1d58f;--cream:#f7f3eb;--ink:#142238;--muted:#6e7888;--white:#fff;--shadow:0 20px 50px rgba(7,26,51,.14)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink)}
-    button,input,select,textarea{font:inherit}.app{max-width:1240px;margin:auto;background:var(--cream);min-height:100vh}.topbar{position:sticky;top:0;z-index:30;height:74px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(7,26,51,.94);backdrop-filter:blur(18px);color:white;border-bottom:1px solid rgba(255,255,255,.08)}
-    .brand{display:flex;gap:12px;align-items:center}.monogram{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:Georgia,serif;color:var(--gold);font-size:24px}.brand h1{font-family:Georgia,serif;font-size:20px;margin:0;font-weight:500}.brand small{display:block;color:#d7c59a;font-size:9px;letter-spacing:.18em;margin-top:3px}.top-actions{display:flex;gap:10px}.icon-btn{border:0;background:rgba(255,255,255,.08);color:white;width:42px;height:42px;border-radius:14px;cursor:pointer}.hero{min-height:690px;display:grid;align-items:end;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(7,26,51,.95) 0%,rgba(7,26,51,.75) 46%,rgba(7,26,51,.12) 100%),url('assets/hero.jpeg') center/cover no-repeat;color:white;padding:8vw 6vw 7vw}.hero:after{content:"";position:absolute;inset:auto -20% -55% 20%;height:500px;background:radial-gradient(circle,var(--gold) 0,transparent 62%);opacity:.13}.hero-copy{position:relative;z-index:2;max-width:690px}.eyebrow{font-size:12px;letter-spacing:.22em;font-weight:700;color:var(--gold2);text-transform:uppercase}.hero h2{font-family:Georgia,serif;font-size:clamp(52px,8vw,96px);line-height:.95;font-weight:400;margin:18px 0}.hero h2 span{color:var(--gold2)}.hero p{font-size:18px;line-height:1.7;color:#e9edf2;max-width:590px}.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{border:0;border-radius:16px;padding:15px 20px;font-weight:700;cursor:pointer;transition:.2s transform,.2s box-shadow}.btn:hover{transform:translateY(-2px)}.btn-gold{background:var(--gold);color:var(--navy);box-shadow:0 14px 35px rgba(217,177,95,.26)}.btn-outline{background:rgba(255,255,255,.08);color:white;border:1px solid rgba(255,255,255,.42)}
-    .quick{position:relative;z-index:4;margin:-36px 5vw 0;background:white;border-radius:24px;padding:18px;display:grid;grid-template-columns:repeat(3,1fr);box-shadow:var(--shadow)}.quick button{border:0;background:transparent;padding:16px;cursor:pointer}.quick button+button{border-left:1px solid #ece8df}.quick strong{display:block;color:var(--ink);margin-top:8px}.quick span{font-size:12px;color:var(--muted)}.quick .qicon{font-size:23px;color:#a66f17}
-    section{padding:84px 5vw}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:30px}.section-head h3{font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);font-weight:400;margin:8px 0 0}.section-head p{max-width:500px;color:var(--muted);line-height:1.7}.tech-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:18px}.tech-card{min-height:430px;position:relative;border-radius:26px;overflow:hidden;background-size:cover;background-position:center;box-shadow:var(--shadow)}.tech-card:first-child{grid-row:span 2;min-height:620px}.tech-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(7,26,51,.92) 100%)}.tech-copy{position:absolute;z-index:2;left:24px;right:24px;bottom:24px;color:white}.tech-copy small{color:var(--gold2);letter-spacing:.16em}.tech-copy h4{font-family:Georgia,serif;font-size:34px;margin:8px 0}.tech-copy p{color:#e5eaf0;line-height:1.5;margin:0}.services{background:var(--navy);color:white}.services .section-head p{color:#c4cfdd}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service-card{padding:28px;border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.1);min-height:220px}.service-icon{font-size:28px;color:var(--gold)}.service-card h4{font-family:Georgia,serif;font-size:26px;margin:18px 0 10px}.service-card p{color:#c5d0dc;line-height:1.6}.promo{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.promo-image{min-height:480px;border-radius:28px;background:url('assets/promo.jpeg') center/cover;box-shadow:var(--shadow)}.promo-copy{padding:20px}.promo-copy h3{font-family:Georgia,serif;font-size:52px;font-weight:400;margin:12px 0}.promo-copy p{color:var(--muted);line-height:1.8}.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}.trust div{background:white;border-radius:18px;padding:20px;box-shadow:0 8px 25px rgba(7,26,51,.07)}.trust strong{font-size:24px;color:var(--navy)}.trust span{display:block;color:var(--muted);font-size:12px;margin-top:6px}.footer{background:#041225;color:white;padding:48px 5vw 110px}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px}.footer p,.footer a{color:#b9c6d4}.footer a{text-decoration:none;display:block;margin:8px 0}.bottom-nav{position:fixed;z-index:25;left:50%;transform:translateX(-50%);bottom:12px;width:min(94%,620px);display:none;grid-template-columns:repeat(5,1fr);background:rgba(255,255,255,.95);backdrop-filter:blur(18px);border:1px solid rgba(7,26,51,.08);border-radius:22px;padding:8px;box-shadow:0 18px 50px rgba(7,26,51,.25)}.bottom-nav button{border:0;background:transparent;padding:8px;font-size:10px;color:var(--muted)}.bottom-nav b{display:block;font-size:20px;color:var(--navy);margin-bottom:2px}.bottom-nav .book-fab{margin-top:-30px;background:var(--gold);border-radius:50%;width:58px;height:58px;justify-self:center;font-size:26px;color:var(--navy);box-shadow:0 12px 30px rgba(217,177,95,.45)}
-    .modal,.chat{position:fixed;z-index:60;inset:0;display:none;align-items:flex-end;justify-content:center;background:rgba(2,10,20,.62);padding:18px}.modal.show,.chat.show{display:flex}.sheet{width:min(100%,620px);max-height:90vh;overflow:auto;background:white;border-radius:28px 28px 18px 18px;padding:24px}.sheet-head{display:flex;align-items:center;justify-content:space-between}.sheet h3{font-family:Georgia,serif;font-size:34px;margin:0}.close{border:0;background:#edf0f4;width:38px;height:38px;border-radius:50%;cursor:pointer}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:700;color:var(--muted)}.field input,.field select,.field textarea{padding:13px;border:1px solid #dfe4ea;border-radius:13px;background:#fbfcfd}.notice{font-size:12px;color:var(--muted);line-height:1.5}.chat .sheet{padding:0;overflow:hidden}.chat-head{padding:20px 22px;background:var(--navy);color:white;display:flex;justify-content:space-between}.chat-body{height:420px;overflow:auto;padding:18px;background:#f6f7f9}.bubble{max-width:82%;padding:12px 14px;border-radius:16px;margin:8px 0;line-height:1.5;font-size:14px}.bot{background:white;color:var(--ink);border-bottom-left-radius:5px}.user{background:var(--navy2);color:white;margin-left:auto;border-bottom-right-radius:5px}.chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid #e5e8ed}.chat-input input{flex:1;border:1px solid #dfe4ea;border-radius:14px;padding:12px}.toast{position:fixed;z-index:80;left:50%;bottom:100px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:white;padding:13px 18px;border-radius:14px;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-    @media(max-width:900px){.tech-grid{grid-template-columns:1fr 1fr}.tech-card:first-child{grid-column:1/-1;grid-row:auto}.service-grid{grid-template-columns:1fr 1fr}.promo{grid-template-columns:1fr}.trust{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:650px){.topbar{height:68px;padding:0 18px}.brand h1{font-size:17px}.top-actions .icon-btn:first-child{display:none}.hero{min-height:650px;padding:110px 22px 78px;background-position:60% center}.hero h2{font-size:54px}.hero p{font-size:15px}.quick{margin:-30px 14px 0;padding:8px}.quick button{padding:13px 4px}.quick span{display:none}section{padding:64px 18px}.section-head{display:block}.tech-grid,.service-grid{grid-template-columns:1fr}.tech-card,.tech-card:first-child{min-height:420px}.promo-image{min-height:400px}.promo-copy{padding:0}.promo-copy h3{font-size:42px}.trust{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}.bottom-nav{display:grid}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer{padding-bottom:130px}}
+    :root{
+      --navy:#071a33;--navy2:#0d294e;--navy3:#102f59;
+      --gold:#d9b15f;--gold2:#f1d58f;--cream:#f7f3eb;
+      --ink:#142238;--muted:#6e7888;--white:#fff;
+      --shadow:0 20px 50px rgba(7,26,51,.14)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink)}
+    button,input,select,textarea{font:inherit}
+    .app{max-width:1240px;margin:auto;background:var(--cream);min-height:100vh}
+    .topbar{position:sticky;top:0;z-index:30;height:74px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(7,26,51,.94);backdrop-filter:blur(18px);color:white;border-bottom:1px solid rgba(255,255,255,.08)}
+    .brand{display:flex;gap:12px;align-items:center}
+    .monogram{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:Georgia,serif;color:var(--gold);font-size:24px}
+    .brand h1{font-family:Georgia,serif;font-size:20px;margin:0;font-weight:500}
+    .brand small{display:block;color:#d7c59a;font-size:9px;letter-spacing:.18em;margin-top:3px}
+    .top-actions{display:flex;gap:10px}
+    .icon-btn{border:0;background:rgba(255,255,255,.08);color:white;width:42px;height:42px;border-radius:14px;cursor:pointer}
+    .hero{min-height:690px;display:grid;align-items:end;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(7,26,51,.96) 0%,rgba(7,26,51,.76) 46%,rgba(7,26,51,.14) 100%),url('assets/hero.jpeg') center/cover no-repeat;color:white;padding:8vw 6vw 7vw}
+    .hero:after{content:"";position:absolute;inset:auto -20% -55% 20%;height:500px;background:radial-gradient(circle,var(--gold) 0,transparent 62%);opacity:.13}
+    .hero-copy{position:relative;z-index:2;max-width:690px}
+    .eyebrow{font-size:12px;letter-spacing:.22em;font-weight:700;color:var(--gold2);text-transform:uppercase}
+    .hero h2{font-family:Georgia,serif;font-size:clamp(52px,8vw,96px);line-height:.95;font-weight:400;margin:18px 0}
+    .hero h2 span{color:var(--gold2)}
+    .hero p{font-size:18px;line-height:1.7;color:#e9edf2;max-width:590px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{border:0;border-radius:16px;padding:15px 20px;font-weight:700;cursor:pointer;transition:.2s transform,.2s box-shadow}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-gold{background:var(--gold);color:var(--navy);box-shadow:0 14px 35px rgba(217,177,95,.26)}
+    .btn-outline{background:rgba(255,255,255,.08);color:white;border:1px solid rgba(255,255,255,.42)}
+    .quick{position:relative;z-index:4;margin:-36px 5vw 0;background:white;border-radius:24px;padding:18px;display:grid;grid-template-columns:repeat(3,1fr);box-shadow:var(--shadow)}
+    .quick button{border:0;background:transparent;padding:16px;cursor:pointer}
+    .quick button+button{border-left:1px solid #ece8df}
+    .quick strong{display:block;color:var(--ink);margin-top:8px}
+    .quick span{font-size:12px;color:var(--muted)}
+    .quick .qicon{font-size:23px;color:#a66f17}
+    section{padding:84px 5vw}
+    .section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:30px}
+    .section-head h3{font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);font-weight:400;margin:8px 0 0}
+    .section-head p{max-width:500px;color:var(--muted);line-height:1.7}
+
+    .machine-showcase{background:linear-gradient(180deg,#06162b,#0b2648);color:white;overflow:hidden}
+    .machine-showcase .section-head p{color:#c8d2df}
+    .machine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .machine-card{position:relative;min-height:520px;border-radius:28px;overflow:hidden;background:#0b213d;border:1px solid rgba(255,255,255,.1);box-shadow:0 24px 60px rgba(0,0,0,.24)}
+    .machine-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .55s ease}
+    .machine-card:hover img{transform:scale(1.045)}
+    .machine-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,26,51,.03) 22%,rgba(7,26,51,.2) 48%,rgba(4,18,37,.98) 100%)}
+    .machine-info{position:absolute;z-index:2;left:24px;right:24px;bottom:24px}
+    .machine-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+    .badge{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:rgba(241,213,143,.14);border:1px solid rgba(241,213,143,.34);color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .machine-info h4{font-family:Georgia,serif;font-size:38px;font-weight:400;margin:0 0 9px}
+    .machine-info p{color:#dbe4ee;line-height:1.55;margin:0}
+    .machine-focus{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+    .machine-focus span{font-size:11px;padding:7px 9px;border-radius:9px;background:rgba(255,255,255,.1);color:#edf3f8}
+    .laser-note{margin-top:18px;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);color:#cbd6e2;line-height:1.6;font-size:13px}
+
+    .tech-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:18px}
+    .tech-card{min-height:430px;position:relative;border-radius:26px;overflow:hidden;background-size:cover;background-position:center;box-shadow:var(--shadow)}
+    .tech-card:first-child{grid-row:span 2;min-height:620px}
+    .tech-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(7,26,51,.92) 100%)}
+    .tech-copy{position:absolute;z-index:2;left:24px;right:24px;bottom:24px;color:white}
+    .tech-copy small{color:var(--gold2);letter-spacing:.16em}
+    .tech-copy h4{font-family:Georgia,serif;font-size:34px;margin:8px 0}
+    .tech-copy p{color:#e5eaf0;line-height:1.5;margin:0}
+    .services{background:var(--navy);color:white}
+    .services .section-head p{color:#c4cfdd}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .service-card{padding:28px;border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.1);min-height:220px}
+    .service-icon{font-size:28px;color:var(--gold)}
+    .service-card h4{font-family:Georgia,serif;font-size:26px;margin:18px 0 10px}
+    .service-card p{color:#c5d0dc;line-height:1.6}
+    .promo{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+    .promo-image{min-height:480px;border-radius:28px;background:url('assets/promo.jpeg') center/cover;box-shadow:var(--shadow)}
+    .promo-copy{padding:20px}
+    .promo-copy h3{font-family:Georgia,serif;font-size:52px;font-weight:400;margin:12px 0}
+    .promo-copy p{color:var(--muted);line-height:1.8}
+    .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+    .trust div{background:white;border-radius:18px;padding:20px;box-shadow:0 8px 25px rgba(7,26,51,.07)}
+    .trust strong{font-size:24px;color:var(--navy)}
+    .trust span{display:block;color:var(--muted);font-size:12px;margin-top:6px}
+    .footer{background:#041225;color:white;padding:48px 5vw 110px}
+    .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px}
+    .footer p,.footer a{color:#b9c6d4}
+    .footer a{text-decoration:none;display:block;margin:8px 0}
+    .bottom-nav{position:fixed;z-index:25;left:50%;transform:translateX(-50%);bottom:12px;width:min(94%,620px);display:none;grid-template-columns:repeat(5,1fr);background:rgba(255,255,255,.95);backdrop-filter:blur(18px);border:1px solid rgba(7,26,51,.08);border-radius:22px;padding:8px;box-shadow:0 18px 50px rgba(7,26,51,.25)}
+    .bottom-nav button{border:0;background:transparent;padding:8px;font-size:10px;color:var(--muted)}
+    .bottom-nav b{display:block;font-size:20px;color:var(--navy);margin-bottom:2px}
+    .bottom-nav .book-fab{margin-top:-30px;background:var(--gold);border-radius:50%;width:58px;height:58px;justify-self:center;font-size:26px;color:var(--navy);box-shadow:0 12px 30px rgba(217,177,95,.45)}
+    .modal,.chat{position:fixed;z-index:60;inset:0;display:none;align-items:flex-end;justify-content:center;background:rgba(2,10,20,.62);padding:18px}
+    .modal.show,.chat.show{display:flex}
+    .sheet{width:min(100%,620px);max-height:90vh;overflow:auto;background:white;border-radius:28px 28px 18px 18px;padding:24px}
+    .sheet-head{display:flex;align-items:center;justify-content:space-between}
+    .sheet h3{font-family:Georgia,serif;font-size:34px;margin:0}
+    .close{border:0;background:#edf0f4;width:38px;height:38px;border-radius:50%;cursor:pointer}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+    .field{display:flex;flex-direction:column;gap:7px}
+    .field.full{grid-column:1/-1}
+    .field label{font-size:12px;font-weight:700;color:var(--muted)}
+    .field input,.field select,.field textarea{padding:13px;border:1px solid #dfe4ea;border-radius:13px;background:#fbfcfd}
+    .notice{font-size:12px;color:var(--muted);line-height:1.5}
+    .chat .sheet{padding:0;overflow:hidden}
+    .chat-head{padding:20px 22px;background:var(--navy);color:white;display:flex;justify-content:space-between}
+    .chat-body{height:420px;overflow:auto;padding:18px;background:#f6f7f9}
+    .bubble{max-width:82%;padding:12px 14px;border-radius:16px;margin:8px 0;line-height:1.5;font-size:14px}
+    .bot{background:white;color:var(--ink);border-bottom-left-radius:5px}
+    .user{background:var(--navy2);color:white;margin-left:auto;border-bottom-right-radius:5px}
+    .chat-input{display:flex;gap:8px;padding:12px;border-top:1px solid #e5e8ed}
+    .chat-input input{flex:1;border:1px solid #dfe4ea;border-radius:14px;padding:12px}
+    .toast{position:fixed;z-index:80;left:50%;bottom:100px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:white;padding:13px 18px;border-radius:14px;opacity:0;pointer-events:none;transition:.25s}
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+    @media(max-width:900px){
+      .machine-grid{grid-template-columns:1fr 1fr}
+      .machine-card:first-child{grid-column:1/-1}
+      .tech-grid{grid-template-columns:1fr 1fr}
+      .tech-card:first-child{grid-column:1/-1;grid-row:auto}
+      .service-grid{grid-template-columns:1fr 1fr}
+      .promo{grid-template-columns:1fr}
+      .trust{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:650px){
+      .topbar{height:68px;padding:0 18px}
+      .brand h1{font-size:17px}
+      .top-actions .icon-btn:first-child{display:none}
+      .hero{min-height:650px;padding:110px 22px 78px;background-position:60% center}
+      .hero h2{font-size:54px}
+      .hero p{font-size:15px}
+      .quick{margin:-30px 14px 0;padding:8px}
+      .quick button{padding:13px 4px}
+      .quick span{display:none}
+      section{padding:64px 18px}
+      .section-head{display:block}
+      .machine-grid,.tech-grid,.service-grid{grid-template-columns:1fr}
+      .machine-card,.machine-card:first-child{min-height:520px;grid-column:auto}
+      .machine-card img{object-position:center}
+      .tech-card,.tech-card:first-child{min-height:420px}
+      .promo-image{min-height:400px}
+      .promo-copy{padding:0}
+      .promo-copy h3{font-size:42px}
+      .trust{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .bottom-nav{display:grid}
+      .form-grid{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      .footer{padding-bottom:130px}
+    }
   </style>
 </head>
 <body>
@@ -29,44 +168,207 @@
   <div class="brand"><div class="monogram">P</div><div><h1>The Lounge</h1><small>BY PARAGASMED</small></div></div>
   <div class="top-actions"><button class="icon-btn" id="installBtn" title="Install app">⇩</button><button class="icon-btn" onclick="openChat()">✦</button></div>
 </header>
+
 <main>
-<section class="hero" id="home"><div class="hero-copy"><div class="eyebrow">Aesthetic dermatology • Calasiao</div><h2>Look good.<br><span>Feel confident.</span></h2><p>Personalized skin, lifting, laser, injectables and hair-restoration treatments guided by medical expertise and modern technology.</p><div class="cta-row"><button class="btn btn-gold" onclick="openBooking()">Book consultation</button><button class="btn btn-outline" onclick="document.querySelector('#treatments').scrollIntoView()">Explore treatments</button></div></div></section>
-<div class="quick"><button onclick="openBooking()"><div class="qicon">◷</div><strong>Book</strong><span>Choose a schedule</span></button><button onclick="openChat()"><div class="qicon">✦</div><strong>Ask</strong><span>Chat with us</span></button><button onclick="document.querySelector('#promotions').scrollIntoView()"><div class="qicon">◇</div><strong>Offers</strong><span>View promotions</span></button></div>
-<section id="treatments"><div class="section-head"><div><div class="eyebrow">Featured technologies</div><h3>Gold-standard care</h3></div><p>A curated selection of energy-based devices for lifting, rejuvenation, pigmentation, texture and body-focused concerns.</p></div>
-<div class="tech-grid">
-  <article class="tech-card" style="background-image:url('assets/sofwave.jpeg')"><div class="tech-copy"><small>NON-INVASIVE LIFTING</small><h4>Sofwave™</h4><p>Comfort-focused ultrasound designed to stimulate collagen with minimal downtime.</p></div></article>
-  <article class="tech-card" style="background-image:url('assets/xerf.jpeg')"><div class="tech-copy"><small>AI-GUIDED RF</small><h4>XERF</h4><p>Advanced radiofrequency for skin firmness and contouring.</p></div></article>
-  <article class="tech-card" style="background-image:url('assets/alma.jpeg')"><div class="tech-copy"><small>LASER PLATFORM</small><h4>Alma Harmony</h4><p>Versatile technology for tone, texture, vascular and pigmentation concerns.</p></div></article>
-  <article class="tech-card" style="background-image:url('assets/ultherapy.jpeg')"><div class="tech-copy"><small>PRECISION ULTRASOUND</small><h4>Ultherapy Prime</h4><p>Focused ultrasound for customized lifting plans.</p></div></article>
-  <article class="tech-card" style="background-image:url('assets/skinbooster.jpeg')"><div class="tech-copy"><small>REGENERATIVE CARE</small><h4>Skin Boosters</h4><p>PDRN, exosomes and personalized revitalizing protocols.</p></div></article>
-</div></section>
-<section class="services" id="services"><div class="section-head"><div><div class="eyebrow">Personalized for you</div><h3>Complete dermatology care</h3></div><p>From cosmetic goals to pathologic skin concerns, every plan begins with proper assessment.</p></div>
-<div class="service-grid">
-  <article class="service-card"><div class="service-icon">✧</div><h4>Botox & Injectables</h4><p>Expression-line treatment, facial balancing and customized injectable planning.</p></article>
-  <article class="service-card"><div class="service-icon">⌁</div><h4>Laser Treatments</h4><p>Targeted protocols for pigmentation, acne marks, redness, pores and texture.</p></article>
-  <article class="service-card"><div class="service-icon">◌</div><h4>Hair Restoration</h4><p>Medical assessment and regenerative options for thinning and shedding.</p></article>
-  <article class="service-card"><div class="service-icon">+</div><h4>Medical Dermatology</h4><p>Consultation for acne, dermatitis, infections, lesions and pathologic cases.</p></article>
-  <article class="service-card"><div class="service-icon">◇</div><h4>Skin Boosters</h4><p>PDRN, exosomes and hydration-focused protocols for skin quality.</p></article>
-  <article class="service-card"><div class="service-icon">↗</div><h4>Combination Plans</h4><p>Layered treatment plans built around goals, downtime and budget.</p></article>
-</div></section>
-<section id="promotions"><div class="promo"><div class="promo-image"></div><div class="promo-copy"><div class="eyebrow">The Lounge experience</div><h3>Premium care, thoughtfully delivered.</h3><p>This prototype combines marketing, booking and a guided chatbot experience. The next production phase can connect live calendars, automated email reminders, secure patient records, billing, invoicing and inventory.</p><div class="trust"><div><strong>1:1</strong><span>Personalized consult</span></div><div><strong>PWA</strong><span>Installable on mobile</span></div><div><strong>24/7</strong><span>Digital inquiry access</span></div><div><strong>Secure</strong><span>Backend-ready roadmap</span></div></div><div class="cta-row"><button class="btn btn-gold" onclick="openBooking()">Request an appointment</button><button class="btn" style="background:white" onclick="openChat()">Ask the assistant</button></div></div></div></section>
-</main>
-<footer class="footer"><div class="footer-grid"><div><div class="brand"><div class="monogram">P</div><div><h1>The Lounge</h1><small>BY PARAGASMED</small></div></div><p>Premium skin and aesthetic dermatology in a calm, modern setting.</p></div><div><h4>Explore</h4><a href="#treatments">Technologies</a><a href="#services">Services</a><a href="#promotions">Promotions</a></div><div><h4>Prototype note</h4><p>Appointments and chat are simulated. No medical diagnosis is provided by this demo.</p></div></div></footer>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow">Aesthetic dermatology • Calasiao</div>
+    <h2>Look good.<br><span>Feel confident.</span></h2>
+    <p>Personalized skin, lifting, laser, injectables and hair-restoration treatments guided by medical expertise and modern technology.</p>
+    <div class="cta-row">
+      <button class="btn btn-gold" onclick="openBooking()">Book consultation</button>
+      <button class="btn btn-outline" onclick="document.querySelector('#machines').scrollIntoView()">Explore our machines</button>
+    </div>
+  </div>
+</section>
+
+<div class="quick">
+  <button onclick="openBooking()"><div class="qicon">◷</div><strong>Book</strong><span>Choose a schedule</span></button>
+  <button onclick="openChat()"><div class="qicon">✦</div><strong>Ask</strong><span>Chat with us</span></button>
+  <button onclick="document.querySelector('#promotions').scrollIntoView()"><div class="qicon">◇</div><strong>Offers</strong><span>View promotions</span></button>
 </div>
-<nav class="bottom-nav"><button onclick="scrollTo(0,0)"><b>⌂</b>Home</button><button onclick="document.querySelector('#treatments').scrollIntoView()"><b>◇</b>Treatments</button><button class="book-fab" onclick="openBooking()">+</button><button onclick="openChat()"><b>✦</b>Ask</button><button onclick="showToast('Patient portal is planned for Phase 2')"><b>○</b>Profile</button></nav>
-<div class="modal" id="booking"><div class="sheet"><div class="sheet-head"><div><div class="eyebrow">Appointment request</div><h3>Book a consultation</h3></div><button class="close" onclick="closeBooking()">×</button></div><form id="bookingForm" class="form-grid"><div class="field"><label>Full name</label><input required placeholder="Your name"></div><div class="field"><label>Mobile number</label><input required placeholder="09xx xxx xxxx"></div><div class="field"><label>Email</label><input type="email" required placeholder="you@email.com"></div><div class="field"><label>Service</label><select required><option value="">Select treatment</option><option>Sofwave</option><option>XERF</option><option>Alma Harmony</option><option>Botox / Injectables</option><option>Hair Restoration</option><option>Medical Dermatology</option><option>Skin Boosters</option></select></div><div class="field"><label>Preferred date</label><input type="date" required></div><div class="field"><label>Preferred time</label><select required><option>10:00 AM</option><option>1:00 PM</option><option>3:00 PM</option><option>5:00 PM</option></select></div><div class="field full"><label>Concern or goal</label><textarea rows="3" placeholder="Tell us what you would like to improve"></textarea></div><div class="field full"><p class="notice">Prototype only: this form stores nothing and sends no email yet. A production version can connect to a secure booking backend and reminder service.</p><button class="btn btn-gold" type="submit">Submit request</button></div></form></div></div>
-<div class="chat" id="chat"><div class="sheet"><div class="chat-head"><div><strong>Lounge Assistant</strong><div style="font-size:11px;color:#d8c79e">General information only</div></div><button class="close" onclick="closeChat()">×</button></div><div class="chat-body" id="chatBody"><div class="bubble bot">Welcome to The Lounge by ParagasMed. Ask about treatments, downtime, booking or consultation preparation.</div></div><form class="chat-input" id="chatForm"><input id="chatInput" placeholder="Ask a question..." autocomplete="off"><button class="btn btn-gold">Send</button></form></div></div>
+
+<section class="machine-showcase" id="machines">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Advanced aesthetic technology</div>
+      <h3>Our laser & energy suite</h3>
+    </div>
+    <p>Explore the premium platforms used to create personalized plans for lifting, firmness, pigmentation, redness, texture and overall skin quality.</p>
+  </div>
+
+  <div class="machine-grid">
+    <article class="machine-card">
+      <img src="assets/alma.jpeg" alt="Alma Harmony laser platform" loading="lazy">
+      <div class="machine-info">
+        <div class="machine-badges"><span class="badge">Laser platform</span><span class="badge">Multi-application</span></div>
+        <h4>Alma Harmony</h4>
+        <p>A versatile laser and light platform for customized treatment of pigmentation, redness, acne marks, pores and uneven texture.</p>
+        <div class="machine-focus"><span>Pigmentation</span><span>Redness</span><span>Texture</span><span>Acne marks</span></div>
+      </div>
+    </article>
+
+    <article class="machine-card">
+      <img src="assets/xerf.jpeg" alt="XERF radiofrequency machine" loading="lazy">
+      <div class="machine-info">
+        <div class="machine-badges"><span class="badge">Radiofrequency</span><span class="badge">Non-invasive</span></div>
+        <h4>XERF</h4>
+        <p>Advanced radiofrequency technology designed to support firmer-looking skin, facial contouring and collagen remodeling.</p>
+        <div class="machine-focus"><span>Firmness</span><span>Contour</span><span>Collagen</span></div>
+      </div>
+    </article>
+
+    <article class="machine-card">
+      <img src="assets/sofwave.jpeg" alt="Sofwave ultrasound machine" loading="lazy">
+      <div class="machine-info">
+        <div class="machine-badges"><span class="badge">Ultrasound</span><span class="badge">Minimal downtime</span></div>
+        <h4>Sofwave™</h4>
+        <p>Comfort-focused ultrasound treatment designed to stimulate collagen and support non-invasive skin lifting.</p>
+        <div class="machine-focus"><span>Lifting</span><span>Fine lines</span><span>Skin quality</span></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="laser-note">Treatment suitability, expected results, settings and number of sessions vary. A medical consultation is required before any laser or energy-based procedure.</div>
+</section>
+
+<section id="treatments">
+  <div class="section-head">
+    <div><div class="eyebrow">Featured technologies</div><h3>Gold-standard care</h3></div>
+    <p>A curated selection of energy-based devices and regenerative treatments for lifting, rejuvenation, pigmentation and texture concerns.</p>
+  </div>
+  <div class="tech-grid">
+    <article class="tech-card" style="background-image:url('assets/sofwave.jpeg')"><div class="tech-copy"><small>NON-INVASIVE LIFTING</small><h4>Sofwave™</h4><p>Comfort-focused ultrasound designed to stimulate collagen with minimal downtime.</p></div></article>
+    <article class="tech-card" style="background-image:url('assets/xerf.jpeg')"><div class="tech-copy"><small>ADVANCED RF</small><h4>XERF</h4><p>Advanced radiofrequency for skin firmness and contouring.</p></div></article>
+    <article class="tech-card" style="background-image:url('assets/alma.jpeg')"><div class="tech-copy"><small>LASER PLATFORM</small><h4>Alma Harmony</h4><p>Versatile technology for tone, texture, vascular and pigmentation concerns.</p></div></article>
+    <article class="tech-card" style="background-image:url('assets/ultherapy.jpeg')"><div class="tech-copy"><small>PRECISION ULTRASOUND</small><h4>Ultherapy Prime</h4><p>Focused ultrasound for customized lifting plans.</p></div></article>
+    <article class="tech-card" style="background-image:url('assets/skinbooster.jpeg')"><div class="tech-copy"><small>REGENERATIVE CARE</small><h4>Skin Boosters</h4><p>PDRN, exosomes and personalized revitalizing protocols.</p></div></article>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-head">
+    <div><div class="eyebrow">Personalized for you</div><h3>Complete dermatology care</h3></div>
+    <p>From cosmetic goals to pathologic skin concerns, every plan begins with proper assessment.</p>
+  </div>
+  <div class="service-grid">
+    <article class="service-card"><div class="service-icon">✧</div><h4>Botox & Injectables</h4><p>Expression-line treatment, facial balancing and customized injectable planning.</p></article>
+    <article class="service-card"><div class="service-icon">⌁</div><h4>Laser Treatments</h4><p>Targeted protocols for pigmentation, acne marks, redness, pores and texture.</p></article>
+    <article class="service-card"><div class="service-icon">◌</div><h4>Hair Restoration</h4><p>Medical assessment and regenerative options for thinning and shedding.</p></article>
+    <article class="service-card"><div class="service-icon">+</div><h4>Medical Dermatology</h4><p>Consultation for acne, dermatitis, infections, lesions and pathologic cases.</p></article>
+    <article class="service-card"><div class="service-icon">◇</div><h4>Skin Boosters</h4><p>PDRN, exosomes and hydration-focused protocols for skin quality.</p></article>
+    <article class="service-card"><div class="service-icon">↗</div><h4>Combination Plans</h4><p>Layered treatment plans built around goals, downtime and budget.</p></article>
+  </div>
+</section>
+
+<section id="promotions">
+  <div class="promo">
+    <div class="promo-image"></div>
+    <div class="promo-copy">
+      <div class="eyebrow">The Lounge experience</div>
+      <h3>Premium care, thoughtfully delivered.</h3>
+      <p>This prototype combines marketing, booking and a guided chatbot experience. The next production phase can connect live calendars, automated email reminders, secure patient records, billing, invoicing and inventory.</p>
+      <div class="trust">
+        <div><strong>1:1</strong><span>Personalized consult</span></div>
+        <div><strong>PWA</strong><span>Installable on mobile</span></div>
+        <div><strong>24/7</strong><span>Digital inquiry access</span></div>
+        <div><strong>Secure</strong><span>Backend-ready roadmap</span></div>
+      </div>
+      <div class="cta-row">
+        <button class="btn btn-gold" onclick="openBooking()">Request an appointment</button>
+        <button class="btn" style="background:white" onclick="openChat()">Ask the assistant</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><div class="brand"><div class="monogram">P</div><div><h1>The Lounge</h1><small>BY PARAGASMED</small></div></div><p>Premium skin and aesthetic dermatology in a calm, modern setting.</p></div>
+    <div><h4>Explore</h4><a href="#machines">Laser machines</a><a href="#treatments">Technologies</a><a href="#services">Services</a><a href="#promotions">Promotions</a></div>
+    <div><h4>Prototype note</h4><p>Appointments and chat are simulated. No medical diagnosis is provided by this demo.</p></div>
+  </div>
+</footer>
+</div>
+
+<nav class="bottom-nav">
+  <button onclick="scrollTo(0,0)"><b>⌂</b>Home</button>
+  <button onclick="document.querySelector('#machines').scrollIntoView()"><b>◇</b>Machines</button>
+  <button class="book-fab" onclick="openBooking()">+</button>
+  <button onclick="openChat()"><b>✦</b>Ask</button>
+  <button onclick="showToast('Patient portal is planned for Phase 2')"><b>○</b>Profile</button>
+</nav>
+
+<div class="modal" id="booking">
+  <div class="sheet">
+    <div class="sheet-head"><div><div class="eyebrow">Appointment request</div><h3>Book a consultation</h3></div><button class="close" onclick="closeBooking()">×</button></div>
+    <form id="bookingForm" class="form-grid">
+      <div class="field"><label>Full name</label><input required placeholder="Your name"></div>
+      <div class="field"><label>Mobile number</label><input required placeholder="09xx xxx xxxx"></div>
+      <div class="field"><label>Email</label><input type="email" required placeholder="you@email.com"></div>
+      <div class="field"><label>Service</label><select required><option value="">Select treatment</option><option>Sofwave</option><option>XERF</option><option>Alma Harmony</option><option>Botox / Injectables</option><option>Hair Restoration</option><option>Medical Dermatology</option><option>Skin Boosters</option></select></div>
+      <div class="field"><label>Preferred date</label><input type="date" required></div>
+      <div class="field"><label>Preferred time</label><select required><option>10:00 AM</option><option>1:00 PM</option><option>3:00 PM</option><option>5:00 PM</option></select></div>
+      <div class="field full"><label>Concern or goal</label><textarea rows="3" placeholder="Tell us what you would like to improve"></textarea></div>
+      <div class="field full"><p class="notice">Prototype only: this form stores nothing and sends no email yet. A production version can connect to a secure booking backend and reminder service.</p><button class="btn btn-gold" type="submit">Submit request</button></div>
+    </form>
+  </div>
+</div>
+
+<div class="chat" id="chat">
+  <div class="sheet">
+    <div class="chat-head"><div><strong>Lounge Assistant</strong><div style="font-size:11px;color:#d8c79e">General information only</div></div><button class="close" onclick="closeChat()">×</button></div>
+    <div class="chat-body" id="chatBody"><div class="bubble bot">Welcome to The Lounge by ParagasMed. Ask about treatments, downtime, booking or consultation preparation.</div></div>
+    <form class="chat-input" id="chatForm"><input id="chatInput" placeholder="Ask a question..." autocomplete="off"><button class="btn btn-gold">Send</button></form>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
+
 <script>
-let installPrompt=null;const booking=document.getElementById('booking'),chat=document.getElementById('chat'),toast=document.getElementById('toast');
-function openBooking(){booking.classList.add('show')}function closeBooking(){booking.classList.remove('show')}function openChat(){chat.classList.add('show')}function closeChat(){chat.classList.remove('show')}
+let installPrompt=null;
+const booking=document.getElementById('booking'),chat=document.getElementById('chat'),toast=document.getElementById('toast');
+function openBooking(){booking.classList.add('show')}
+function closeBooking(){booking.classList.remove('show')}
+function openChat(){chat.classList.add('show')}
+function closeChat(){chat.classList.remove('show')}
 function showToast(msg){toast.textContent=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)}
-booking.addEventListener('click',e=>{if(e.target===booking)closeBooking()});chat.addEventListener('click',e=>{if(e.target===chat)closeChat()});
+booking.addEventListener('click',e=>{if(e.target===booking)closeBooking()});
+chat.addEventListener('click',e=>{if(e.target===chat)closeChat()});
 document.getElementById('bookingForm').addEventListener('submit',e=>{e.preventDefault();closeBooking();showToast('Appointment request saved in this demo ✓');e.target.reset()});
-const replies=[[/sofwave|softwave/i,'Sofwave uses ultrasound energy to support collagen stimulation and non-invasive lifting. Suitability, settings and expected results require an in-person medical assessment.'],[/xerf|radiofrequency|rf/i,'XERF is a radiofrequency-based treatment designed for skin tightening and contouring. Treatment plans vary based on skin condition and goals.'],[/alma|laser|pigment|acne mark/i,'Alma Harmony is a versatile laser and light platform that may be used for concerns such as pigmentation, redness and texture. A dermatologist should determine the right module and settings.'],[/botox|wrinkle|inject/i,'Botox consultations review facial movement, goals, medical history and dosing. Results and duration vary by patient.'],[/hair|exosome|pdrn/i,'Hair restoration starts with identifying the cause of shedding or thinning. Options may include medical treatment and regenerative protocols depending on assessment.'],[/downtime|recovery/i,'Downtime depends on the treatment. Many non-invasive procedures have minimal downtime, while some lasers may require several recovery days.'],[/price|cost|how much/i,'Pricing depends on the treatment area, number of sessions and personalized plan. The clinic can confirm pricing after assessment.'],[/book|schedule|appointment/i,'Tap the gold Book button to submit an appointment request. In the production version, available slots and email reminders will be connected automatically.']];
-document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();const input=document.getElementById('chatInput'),q=input.value.trim();if(!q)return;addBubble(q,'user');input.value='';setTimeout(()=>{let answer='I can help with general treatment information and booking. For diagnosis, urgent concerns or personalized medical advice, please consult the clinic directly.';for(const [r,a] of replies){if(r.test(q)){answer=a;break}}addBubble(answer,'bot')},450)});
-function addBubble(text,type){const b=document.createElement('div');b.className='bubble '+type;b.textContent=text;document.getElementById('chatBody').appendChild(b);b.scrollIntoView({behavior:'smooth',block:'end'})}
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;document.getElementById('installBtn').style.display='block'});document.getElementById('installBtn').addEventListener('click',async()=>{if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null}else showToast('On iPhone: Share → Add to Home Screen')});
+const replies=[
+  [/sofwave|softwave/i,'Sofwave uses ultrasound energy to support collagen stimulation and non-invasive lifting. Suitability, settings and expected results require an in-person medical assessment.'],
+  [/xerf|radiofrequency|rf/i,'XERF is a radiofrequency-based treatment designed for skin tightening and contouring. Treatment plans vary based on skin condition and goals.'],
+  [/alma|laser|pigment|acne mark/i,'Alma Harmony is a versatile laser and light platform that may be used for concerns such as pigmentation, redness and texture. A dermatologist should determine the right module and settings.'],
+  [/botox|wrinkle|inject/i,'Botox consultations review facial movement, goals, medical history and dosing. Results and duration vary by patient.'],
+  [/hair|exosome|pdrn/i,'Hair restoration starts with identifying the cause of shedding or thinning. Options may include medical treatment and regenerative protocols depending on assessment.'],
+  [/downtime|recovery/i,'Downtime depends on the treatment. Many non-invasive procedures have minimal downtime, while some lasers may require several recovery days.'],
+  [/price|cost|how much/i,'Pricing depends on the treatment area, number of sessions and personalized plan. The clinic can confirm pricing after assessment.'],
+  [/book|schedule|appointment/i,'Tap the gold Book button to submit an appointment request. In the production version, available slots and email reminders will be connected automatically.']
+];
+document.getElementById('chatForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const input=document.getElementById('chatInput'),q=input.value.trim();
+  if(!q)return;
+  addBubble(q,'user');input.value='';
+  setTimeout(()=>{
+    let answer='I can help with general treatment information and booking. For diagnosis, urgent concerns or personalized medical advice, please consult the clinic directly.';
+    for(const [r,a] of replies){if(r.test(q)){answer=a;break}}
+    addBubble(answer,'bot')
+  },450)
+});
+function addBubble(text,type){
+  const b=document.createElement('div');
+  b.className='bubble '+type;b.textContent=text;
+  document.getElementById('chatBody').appendChild(b);
+  b.scrollIntoView({behavior:'smooth',block:'end'})
+}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;document.getElementById('installBtn').style.display='block'});
+document.getElementById('installBtn').addEventListener('click',async()=>{
+  if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null}
+  else showToast('On iPhone: Share → Add to Home Screen')
+});
 if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
 </script>
 </body>
