@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ultBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#102f59"/>
+      <stop offset="100%" stop-color="#071a33"/>
+    </linearGradient>
+    <radialGradient id="ultFocus" cx="60%" cy="45%" r="12%">
+      <stop offset="0%" stop-color="#f7f3eb" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#f7f3eb" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="700" fill="url(#ultBg)"/>
+  <g fill="none" stroke="#d9b15f">
+    <circle cx="540" cy="315" r="40" stroke-width="2" opacity="0.85"/>
+    <circle cx="540" cy="315" r="90" stroke-width="2" opacity="0.6"/>
+    <circle cx="540" cy="315" r="150" stroke-width="1.5" opacity="0.42"/>
+    <circle cx="540" cy="315" r="220" stroke-width="1.5" opacity="0.28"/>
+    <circle cx="540" cy="315" r="300" stroke-width="1" opacity="0.16"/>
+  </g>
+  <rect width="900" height="700" fill="url(#ultFocus)"/>
+  <g stroke="#f1d58f" stroke-width="1.5" opacity="0.5">
+    <line x1="540" y1="0" x2="540" y2="140"/>
+    <line x1="540" y1="490" x2="540" y2="700"/>
+    <line x1="140" y1="315" x2="330" y2="315"/>
+    <line x1="750" y1="315" x2="900" y2="315"/>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="xerfBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d294e"/>
+      <stop offset="100%" stop-color="#071a33"/>
+    </linearGradient>
+    <radialGradient id="xerfGlow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#3a6ea8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3a6ea8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#xerfBg)"/>
+  <rect width="800" height="1000" fill="url(#xerfGlow)"/>
+  <g fill="none" stroke="#d9b15f" opacity="0.55">
+    <circle cx="400" cy="470" r="60" stroke-width="2"/>
+    <circle cx="400" cy="470" r="130" stroke-width="2" opacity="0.75"/>
+    <circle cx="400" cy="470" r="200" stroke-width="1.5" opacity="0.55"/>
+    <circle cx="400" cy="470" r="270" stroke-width="1.5" opacity="0.4"/>
+    <circle cx="400" cy="470" r="340" stroke-width="1" opacity="0.25"/>
+  </g>
+  <circle cx="400" cy="470" r="16" fill="#f1d58f"/>
+  <circle cx="400" cy="470" r="30" fill="none" stroke="#f1d58f" stroke-width="1.5" opacity="0.8"/>
+  <g stroke="#f1d58f" stroke-width="2" opacity="0.4">
+    <line x1="400" y1="80" x2="400" y2="150"/>
+    <line x1="400" y1="790" x2="400" y2="860"/>
+    <line x1="30" y1="470" x2="100" y2="470"/>
+    <line x1="700" y1="470" x2="770" y2="470"/>
+  </g>
+</svg>
