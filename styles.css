@@ -16,7 +16,7 @@ button,input,select,textarea{font:inherit}
 .brand small{display:block;color:#d7c59a;font-size:9px;letter-spacing:.18em;margin-top:3px}
 .top-actions{display:flex;gap:10px}
 .icon-btn{border:0;background:rgba(255,255,255,.08);color:white;width:42px;height:42px;border-radius:14px;cursor:pointer}
-.hero{min-height:690px;display:grid;align-items:end;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(7,26,51,.96) 0%,rgba(7,26,51,.76) 46%,rgba(7,26,51,.14) 100%),url('assets/hero.jpeg') center/cover no-repeat;color:white;padding:8vw 6vw 7vw}
+.hero{min-height:690px;display:grid;align-items:end;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(7,26,51,.96) 0%,rgba(7,26,51,.76) 46%,rgba(7,26,51,.14) 100%),url('assets/hero.svg') center/cover no-repeat;color:white;padding:8vw 6vw 7vw}
 .hero:after{content:"";position:absolute;inset:auto -20% -55% 20%;height:500px;background:radial-gradient(circle,var(--gold) 0,transparent 62%);opacity:.13}
 .hero-copy{position:relative;z-index:2;max-width:690px}
 .eyebrow{font-size:12px;letter-spacing:.22em;font-weight:700;color:var(--gold2);text-transform:uppercase}
@@ -71,7 +71,7 @@ section{padding:84px 5vw}
 .service-card h4{font-family:Georgia,serif;font-size:26px;margin:18px 0 10px}
 .service-card p{color:#c5d0dc;line-height:1.6}
 .promo{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
-.promo-image{min-height:480px;border-radius:28px;background:url('assets/promo.jpeg') center/cover;box-shadow:var(--shadow)}
+.promo-image{min-height:480px;border-radius:28px;background:url('assets/promo.svg') center/cover;box-shadow:var(--shadow)}
 .promo-copy{padding:20px}
 .promo-copy h3{font-family:Georgia,serif;font-size:52px;font-weight:400;margin:12px 0}
 .promo-copy p{color:var(--muted);line-height:1.8}
