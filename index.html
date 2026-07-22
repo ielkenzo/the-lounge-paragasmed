@@ -11,14 +11,33 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" href="assets/icon-192.png" />
   <title>The Lounge by ParagasMed</title>
-  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{navy:'#071a33',navy2:'#0d294e',gold:'#d9b15f',gold2:'#f1d58f',cream:'#f7f3eb',ink:'#142238',muted:'#6e7888'},fontFamily:{serif:['Georgia','serif']},boxShadow:{lounge:'0 20px 50px rgba(7,26,51,.14)'}}}}</script>
+  <style type="text/tailwindcss">
+    @layer base{html{@apply scroll-smooth}body{@apply m-0 bg-cream text-ink antialiased}button,input,select,textarea{@apply font-sans}}
+    @layer components{
+      .app{@apply mx-auto min-h-screen max-w-[1240px] bg-cream}.topbar{@apply sticky top-0 z-30 flex h-[74px] items-center justify-between border-b border-white/10 bg-navy/95 px-[5vw] text-white backdrop-blur-xl max-sm:h-[68px] max-sm:px-[18px]}.brand{@apply flex items-center gap-3}.brand-link{@apply text-white no-underline}.monogram{@apply grid h-[42px] w-[42px] place-items-center rounded-full border border-gold font-serif text-2xl text-gold}.brand h1{@apply m-0 font-serif text-xl font-medium max-sm:text-[17px]}.brand small{@apply mt-1 block text-[9px] tracking-[.18em] text-[#d7c59a]}.top-actions{@apply flex gap-2.5 max-sm:gap-1.5}.icon-btn{@apply h-[42px] w-[42px] cursor-pointer rounded-[14px] border-0 bg-white/10 text-white max-sm:h-10 max-sm:w-10}.install-action{@apply max-sm:hidden}
+      .desktop-nav{@apply ml-auto mr-[22px] hidden items-center gap-6 min-[901px]:flex}.desktop-nav a{@apply border-b-2 border-transparent py-2.5 text-[13px] font-bold text-[#dbe4ee] no-underline hover:border-gold hover:text-gold2}.desktop-nav a.active{@apply border-gold text-gold2}.desktop-nav button{@apply cursor-pointer rounded-xl border-0 bg-gold px-[15px] py-[11px] text-[13px] font-extrabold text-navy}.menu-toggle{@apply hidden h-11 w-11 cursor-pointer rounded-[14px] border-0 bg-white/10 p-3 max-[900px]:block max-sm:h-10 max-sm:w-10}.menu-toggle span{@apply my-1 block h-0.5 rounded bg-white transition}.menu-toggle[aria-expanded="true"] span:first-child{@apply translate-y-[6px] rotate-45}.menu-toggle[aria-expanded="true"] span:nth-child(2){@apply opacity-0}.menu-toggle[aria-expanded="true"] span:last-child{@apply -translate-y-[6px] -rotate-45}.mobile-menu{@apply fixed left-0 right-0 top-[74px] z-20 hidden max-h-[calc(100dvh-74px)] overflow-y-auto bg-navy/95 px-[18px] pb-[22px] pt-[14px] shadow-2xl max-sm:top-[68px] max-sm:max-h-[calc(100dvh-68px)]}.mobile-menu.show{@apply grid}.mobile-menu a,.mobile-menu button{@apply block w-full border-0 border-b border-white/10 bg-transparent px-1 py-[15px] text-left font-bold text-white no-underline}.mobile-menu button{@apply mt-2.5 rounded-[13px] border-0 bg-gold p-[14px] text-center text-navy}
+      section{@apply px-[5vw] py-[84px] max-sm:px-[18px] max-sm:py-16}.hero{@apply relative grid min-h-[690px] items-end overflow-hidden px-[6vw] pb-[7vw] pt-[8vw] text-white max-sm:min-h-[650px] max-sm:px-[22px] max-sm:pb-[78px] max-sm:pt-[110px]}.hero-copy{@apply relative z-[2] max-w-[690px]}.eyebrow{@apply text-xs font-bold uppercase tracking-[.22em] text-gold2}.hero h2{@apply my-[18px] font-serif text-[clamp(52px,8vw,96px)] font-normal leading-[.95] max-sm:text-[54px]}.hero h2 span{@apply text-gold2}.hero p{@apply max-w-[590px] text-lg leading-[1.7] text-[#e9edf2] max-sm:text-[15px]}.cta-row{@apply mt-7 flex flex-wrap gap-3}.btn{@apply cursor-pointer rounded-2xl border-0 px-5 py-[15px] font-bold transition hover:-translate-y-0.5}.btn-gold{@apply bg-gold text-navy shadow-[0_14px_35px_rgba(217,177,95,.26)]}.btn-outline{@apply border border-white/40 bg-white/10 text-white}
+      .quick{@apply relative z-[4] mx-[5vw] -mt-9 grid grid-cols-3 rounded-3xl bg-white p-[18px] shadow-lounge max-sm:mx-[14px] max-sm:-mt-[30px] max-sm:p-2}.quick button{@apply cursor-pointer border-0 bg-transparent p-4 max-sm:px-1 max-sm:py-[13px]}.quick button+button{@apply border-l border-[#ece8df]}.quick strong{@apply mt-2 block text-ink}.quick span{@apply text-xs text-muted max-sm:hidden}.qicon{@apply text-[23px] text-[#a66f17]}
+      .section-head{@apply mb-[30px] flex items-end justify-between gap-5 max-sm:block}.section-head h3{@apply mt-2 font-serif text-[clamp(38px,5vw,62px)] font-normal}.section-head p{@apply max-w-[500px] leading-[1.7] text-muted}.machine-showcase{@apply overflow-hidden text-white}.machine-showcase .section-head p{@apply text-[#c8d2df]}.machine-grid{@apply grid grid-cols-2 gap-[18px] max-sm:grid-cols-1}.machine-card{@apply relative min-h-[620px] overflow-hidden rounded-[28px] border border-white/10 bg-[#0b213d] shadow-[0_24px_60px_rgba(0,0,0,.24)] max-sm:min-h-[600px]}.machine-slides{@apply absolute inset-0}.machine-slide{@apply invisible absolute inset-0 m-0 scale-[1.02] opacity-0 transition-all duration-500}.machine-slide.active{@apply visible scale-100 opacity-100}.machine-slide img{@apply h-full w-full object-cover}.machine-slide.product-shot{@apply bg-[#edf1f3]}.machine-slide.product-shot img{@apply p-[8%] object-contain}.machine-controls{@apply absolute right-5 top-5 z-[4] flex items-center gap-2}.machine-controls button{@apply grid h-10 w-10 cursor-pointer place-items-center rounded-full border border-white/20 bg-navy/70 text-xl text-white backdrop-blur}.machine-dots{@apply flex gap-1.5}.machine-dot{@apply h-2 w-2 cursor-pointer rounded-full border-0 bg-white/50 p-0 transition-all}.machine-dot.active{@apply w-6 bg-gold}.machine-info{@apply absolute bottom-6 left-6 right-6 z-[2]}.machine-badges,.machine-focus{@apply flex flex-wrap gap-2}.machine-badges{@apply mb-[14px]}.badge{@apply inline-flex rounded-full border border-gold2/30 bg-gold2/10 px-2.5 py-[7px] text-[10px] font-extrabold uppercase tracking-[.08em] text-gold2}.machine-info h4{@apply mb-[9px] mt-0 font-serif text-[38px] font-normal}.machine-info p{@apply m-0 leading-[1.55] text-[#dbe4ee]}.machine-focus{@apply mt-[15px]}.machine-focus span{@apply rounded-[9px] bg-white/10 px-[9px] py-[7px] text-[11px] text-[#edf3f8]}.laser-note{@apply mt-[18px] rounded-[18px] border border-white/10 bg-white/[.06] px-5 py-[18px] text-[13px] leading-[1.6] text-[#cbd6e2]}.laser-note span{@apply block}.photo-credit{@apply mt-2 text-[11px] text-[#9fb0c3]}.photo-credit a{@apply text-gold2 underline-offset-4}
+      .tech-grid{@apply grid grid-cols-[1.35fr_1fr_1fr] gap-[18px] max-[900px]:grid-cols-2 max-sm:grid-cols-1}.tech-card{@apply relative min-h-[430px] overflow-hidden rounded-[26px] bg-cover bg-center shadow-lounge max-sm:min-h-[420px]}.tech-card:first-child{@apply row-span-2 min-h-[620px] max-[900px]:col-span-2 max-[900px]:row-auto max-sm:col-span-1 max-sm:min-h-[420px]}.tech-card.brand-product{@apply bg-[#dfe3e8] bg-no-repeat}.tech-card.ultherapy-card{@apply bg-contain bg-[center_38%]}.tech-copy{@apply absolute bottom-6 left-6 right-6 z-[2] text-white}.tech-copy small{@apply tracking-[.16em] text-gold2}.tech-copy h4{@apply my-2 font-serif text-[34px]}.tech-copy p{@apply m-0 leading-normal text-[#e5eaf0]}.brand-note{@apply mx-0.5 mb-0 mt-[18px] text-[11px] leading-[1.6] text-muted}.brand-note a{@apply font-bold text-navy2 underline-offset-4}
+      .services{@apply bg-navy text-white}.services .section-head p{@apply text-[#c4cfdd]}.service-grid{@apply grid grid-cols-3 gap-4 max-[900px]:grid-cols-2 max-sm:grid-cols-1}.service-card{@apply min-h-[220px] rounded-[22px] border border-white/10 p-7}.service-icon{@apply text-[28px] text-gold}.service-card h4{@apply mb-2.5 mt-[18px] font-serif text-[26px]}.service-card p{@apply leading-[1.6] text-[#c5d0dc]}
+      .promo{@apply grid grid-cols-2 items-center gap-6 max-[900px]:grid-cols-1}.promo-image{@apply min-h-[480px] rounded-[28px] shadow-lounge max-sm:min-h-[400px]}.promo-copy{@apply p-5 max-sm:p-0}.promo-copy h3{@apply my-3 font-serif text-[52px] font-normal max-sm:text-[42px]}.promo-copy p{@apply leading-[1.8] text-muted}.trust{@apply mt-[30px] grid grid-cols-4 gap-[14px] max-[900px]:grid-cols-2}.trust div{@apply rounded-[18px] bg-white p-5 shadow-[0_8px_25px_rgba(7,26,51,.07)]}.trust strong{@apply text-2xl text-navy}.trust span{@apply mt-1.5 block text-xs text-muted}
+      .footer{@apply bg-[#041225] px-[5vw] pb-[110px] pt-12 text-white max-sm:pb-[130px]}.footer-grid{@apply grid grid-cols-[1.3fr_1fr_1fr] gap-7 max-[900px]:grid-cols-2 max-sm:grid-cols-1}.footer p,.footer a{@apply text-[#b9c6d4]}.footer a{@apply my-2 block no-underline}.bottom-nav{@apply fixed bottom-3 left-1/2 z-30 hidden w-[min(94%,620px)] -translate-x-1/2 grid-cols-5 rounded-[22px] border border-navy/10 bg-white/95 p-2 shadow-[0_18px_50px_rgba(7,26,51,.25)] backdrop-blur-xl max-sm:grid}.bottom-nav button{@apply border-0 bg-transparent p-2 text-[10px] text-muted}.bottom-nav b{@apply mb-0.5 block text-xl text-navy}.bottom-nav .book-fab{@apply -mt-[30px] h-[58px] w-[58px] justify-self-center rounded-full bg-gold text-[26px] text-navy shadow-[0_12px_30px_rgba(217,177,95,.45)]}
+      .modal,.chat{@apply fixed inset-0 z-[60] hidden items-end justify-center bg-[#020a149e] p-[18px]}.modal.show,.chat.show{@apply flex}.sheet{@apply max-h-[90vh] w-[min(100%,620px)] overflow-auto rounded-[28px_28px_18px_18px] bg-white p-6}.sheet-head{@apply flex items-center justify-between}.sheet h3{@apply m-0 font-serif text-[34px]}.close{@apply h-[38px] w-[38px] cursor-pointer rounded-full border-0 bg-[#edf0f4]}.form-grid{@apply mt-5 grid grid-cols-2 gap-3 max-sm:grid-cols-1}.field{@apply flex flex-col gap-[7px]}.field.full{@apply col-span-full max-sm:col-auto}.field label{@apply text-xs font-bold text-muted}.field input,.field select,.field textarea{@apply rounded-[13px] border border-[#dfe4ea] bg-[#fbfcfd] p-[13px]}.notice{@apply text-xs leading-normal text-muted}.chat .sheet{@apply overflow-hidden p-0}.chat-head{@apply flex justify-between bg-navy px-[22px] py-5 text-white}.chat-body{@apply h-[420px] overflow-auto bg-[#f6f7f9] p-[18px]}.bubble{@apply my-2 max-w-[82%] rounded-2xl px-[14px] py-3 text-sm leading-normal}.bot{@apply rounded-bl-[5px] bg-white text-ink}.user{@apply ml-auto rounded-br-[5px] bg-navy2 text-white}.chat-input{@apply flex gap-2 border-t border-[#e5e8ed] p-3}.chat-input input{@apply flex-1 rounded-[14px] border border-[#dfe4ea] p-3}.toast{@apply pointer-events-none fixed bottom-[100px] left-1/2 z-[80] -translate-x-1/2 translate-y-5 rounded-[14px] bg-navy px-[18px] py-[13px] text-white opacity-0 transition}.toast.show{@apply translate-y-0 opacity-100}
+    }
+    .hero{background:linear-gradient(90deg,rgba(7,26,51,.96),rgba(7,26,51,.76) 46%,rgba(7,26,51,.14)),url('assets/hero.svg') center/cover no-repeat}.hero:after{content:"";position:absolute;inset:auto -20% -55% 20%;height:500px;background:radial-gradient(circle,#d9b15f 0,transparent 62%);opacity:.13}.machine-showcase{background:linear-gradient(180deg,#06162b,#0b2648)}.machine-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,26,51,.03) 22%,rgba(7,26,51,.2) 48%,rgba(4,18,37,.98))}.tech-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(7,26,51,.92))}.tech-card.rejuran-card{background-size:cover;background-position:center}.service-card{background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.04))}.promo-image{background:url('assets/promo.svg') center/cover}
+  </style>
 </head>
 <body>
 <div class="app">
 <header class="topbar">
-  <div class="brand"><div class="monogram">P</div><div><h1>The Lounge</h1><small>BY PARAGASMED</small></div></div>
-  <div class="top-actions"><button class="icon-btn" id="installBtn" title="Install app">⇩</button><button class="icon-btn" onclick="openChat()">✦</button></div>
+  <a class="brand brand-link" href="index.html" aria-label="The Lounge home"><div class="monogram">P</div><div><h1>The Lounge</h1><small>BY PARAGASMED</small></div></a>
+  <nav class="desktop-nav" aria-label="Main navigation"><a class="active" href="index.html">Home</a><a href="treatments.html">Treatments</a><a href="#machines">Technology</a><button onclick="openBooking()">Book consultation</button></nav>
+  <div class="top-actions"><button class="icon-btn install-action" id="installBtn" title="Install app" aria-label="Install app">⇩</button><button class="icon-btn chat-action" onclick="openChat()" aria-label="Open chat">✦</button><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation"><span></span><span></span><span></span></button></div>
 </header>
+<nav class="mobile-menu" id="mobileMenu" data-mobile-menu aria-label="Mobile navigation"><a href="index.html">Home</a><a href="treatments.html">Treatments & procedures</a><a href="#machines">Technology</a><a href="#services">Services</a><button onclick="openBooking()">Book consultation</button></nav>
 
 <main>
 <section class="hero" id="home">
@@ -49,8 +68,9 @@
   </div>
 
   <div class="machine-grid">
-    <article class="machine-card">
-      <img src="assets/laser-platform.jpg" alt="Clinician preparing a medical laser platform in a treatment room" loading="lazy">
+    <article class="machine-card" data-machine-carousel aria-label="Alma Harmony XL PRO gallery">
+      <div class="machine-slides"><figure class="machine-slide product-shot active"><img src="assets/machines/alma-harmony.png" alt="Alma Harmony XL PRO laser platform"></figure><figure class="machine-slide"><img src="assets/treatments/12556702.jpg" alt="Clinician performing a laser skin treatment" loading="lazy"></figure><figure class="machine-slide"><img src="assets/treatments/3985354.jpg" alt="Laser treatment being performed with protective eyewear" loading="lazy"></figure></div>
+      <div class="machine-controls"><button data-machine-prev aria-label="Previous Alma Harmony photo">‹</button><div class="machine-dots"></div><button data-machine-next aria-label="Next Alma Harmony photo">›</button></div>
       <div class="machine-info">
         <div class="machine-badges"><span class="badge">Laser platform</span><span class="badge">Multi-application</span></div>
         <h4>Alma Harmony</h4>
@@ -59,8 +79,9 @@
       </div>
     </article>
 
-    <article class="machine-card">
-      <img src="assets/aesthetic-clinic.jpg" alt="Modern aesthetic treatment room with energy-based devices" loading="lazy">
+    <article class="machine-card" data-machine-carousel aria-label="XERF gallery">
+      <div class="machine-slides"><figure class="machine-slide product-shot active"><img src="assets/machines/xerf-device.png" alt="Cynosure Lutronic XERF radiofrequency platform"></figure><figure class="machine-slide"><img src="assets/treatments/7446690.jpg" alt="Patient receiving an energy-based facial treatment" loading="lazy"></figure><figure class="machine-slide"><img src="assets/treatments/36930272.jpg" alt="Clinician performing a facial procedure in a treatment room" loading="lazy"></figure></div>
+      <div class="machine-controls"><button data-machine-prev aria-label="Previous XERF photo">‹</button><div class="machine-dots"></div><button data-machine-next aria-label="Next XERF photo">›</button></div>
       <div class="machine-info">
         <div class="machine-badges"><span class="badge">Radiofrequency</span><span class="badge">Non-invasive</span></div>
         <h4>XERF</h4>
@@ -69,8 +90,20 @@
       </div>
     </article>
 
-    <article class="machine-card">
-      <img src="assets/laser-treatment.jpg" alt="Practitioner performing an energy-based aesthetic treatment" loading="lazy">
+    <article class="machine-card" data-machine-carousel aria-label="Alma Hybrid gallery">
+      <div class="machine-slides"><figure class="machine-slide product-shot active"><img src="assets/machines/alma-hybrid.png" alt="Alma Hybrid dual-laser resurfacing platform"></figure><figure class="machine-slide"><img src="assets/treatments/7108170.jpg" alt="Clinician preparing a medical laser platform" loading="lazy"></figure><figure class="machine-slide"><img src="assets/treatments/14438367.jpg" alt="Precise clinical skin procedure being performed" loading="lazy"></figure></div>
+      <div class="machine-controls"><button data-machine-prev aria-label="Previous Alma Hybrid photo">‹</button><div class="machine-dots"></div><button data-machine-next aria-label="Next Alma Hybrid photo">›</button></div>
+      <div class="machine-info">
+        <div class="machine-badges"><span class="badge">Hybrid laser</span><span class="badge">Fractional resurfacing</span></div>
+        <h4>Alma Hybrid™</h4>
+        <p>A dual-wavelength platform combining ablative CO₂ and non-ablative 1570 nm energy for customizable resurfacing and scar protocols.</p>
+        <div class="machine-focus"><span>Resurfacing</span><span>Scars</span><span>Texture</span><span>Rejuvenation</span></div>
+      </div>
+    </article>
+
+    <article class="machine-card" data-machine-carousel aria-label="Sofwave gallery">
+      <div class="machine-slides"><figure class="machine-slide product-shot active"><img src="assets/machines/sofwave-device.jpg" alt="Sofwave ultrasound treatment system"></figure><figure class="machine-slide"><img src="assets/laser-treatment.jpg" alt="Energy-based aesthetic treatment being performed" loading="lazy"></figure><figure class="machine-slide"><img src="assets/treatments/7446690.jpg" alt="Clinician treating a patient in a modern skin clinic" loading="lazy"></figure></div>
+      <div class="machine-controls"><button data-machine-prev aria-label="Previous Sofwave photo">‹</button><div class="machine-dots"></div><button data-machine-next aria-label="Next Sofwave photo">›</button></div>
       <div class="machine-info">
         <div class="machine-badges"><span class="badge">Ultrasound</span><span class="badge">Minimal downtime</span></div>
         <h4>Sofwave™</h4>
@@ -82,7 +115,7 @@
 
   <div class="laser-note">
     <span>Treatment suitability, expected results, settings and number of sessions vary. A medical consultation is required before any laser or energy-based procedure. Photos are representative of aesthetic laser and energy-based care.</span>
-    <span class="photo-credit">Free-use photography from <a href="https://www.pexels.com/photo/plastic-surgeon-testing-medical-laser-machine-7108170/" target="_blank" rel="noopener">Pavel Danilyuk</a>, <a href="https://www.pexels.com/photo/crop-faceless-beautician-conducting-laser-hair-removal-to-young-lady-in-safety-glasses-in-clinic-3985354/" target="_blank" rel="noopener">Gustavo Fring</a> and <a href="https://www.pexels.com/photo/aesthetic-clinic-11024139/" target="_blank" rel="noopener">Mike Giovinazzo</a> on Pexels.</span>
+    <span class="photo-credit">Exact device imagery is sourced from <a href="https://www.cynosure.com/xerf/" target="_blank" rel="noopener">Cynosure Lutronic</a>, <a href="https://harmonyxlpro.es/" target="_blank" rel="noopener">Alma Harmony XL PRO</a>, <a href="https://almalasers.com/product/alma-hybrid/" target="_blank" rel="noopener">Alma Lasers</a> and <a href="https://sofwave.com/" target="_blank" rel="noopener">Sofwave</a>. Treatment-use photography is from Pexels under its free-use license. Brand names and trademarks belong to their respective owners.</span>
   </div>
 </section>
 
@@ -141,7 +174,7 @@
 <footer class="footer">
   <div class="footer-grid">
     <div><div class="brand"><div class="monogram">P</div><div><h1>The Lounge</h1><small>BY PARAGASMED</small></div></div><p>Premium skin and aesthetic dermatology in a calm, modern setting.</p></div>
-    <div><h4>Explore</h4><a href="#machines">Laser machines</a><a href="#treatments">Technologies</a><a href="#services">Services</a><a href="#promotions">Promotions</a></div>
+    <div><h4>Explore</h4><a href="treatments.html">Treatments & procedures</a><a href="#machines">Laser machines</a><a href="#treatments">Technologies</a><a href="#services">Services</a><a href="#promotions">Promotions</a></div>
     <div><h4>Prototype note</h4><p>Appointments and chat are simulated. No medical diagnosis is provided by this demo.</p></div>
   </div>
 </footer>
@@ -149,7 +182,7 @@
 
 <nav class="bottom-nav">
   <button onclick="scrollTo(0,0)"><b>⌂</b>Home</button>
-  <button onclick="document.querySelector('#machines').scrollIntoView()"><b>◇</b>Machines</button>
+  <button onclick="location.href='treatments.html'"><b>◇</b>Treatments</button>
   <button class="book-fab" onclick="openBooking()">+</button>
   <button onclick="openChat()"><b>✦</b>Ask</button>
   <button onclick="showToast('Patient portal is planned for Phase 2')"><b>○</b>Profile</button>

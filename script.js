@@ -41,3 +41,42 @@ document.getElementById('installBtn').addEventListener('click',async()=>{
   else showToast('On iPhone: Share → Add to Home Screen')
 });
 if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
+const menuToggle=document.querySelector('[data-menu-toggle]');
+const mobileMenu=document.querySelector('[data-mobile-menu]');
+if(menuToggle&&mobileMenu){
+  const closeMenu=()=>{mobileMenu.classList.remove('show');menuToggle.setAttribute('aria-expanded','false')};
+  menuToggle.addEventListener('click',()=>{
+    const open=menuToggle.getAttribute('aria-expanded')==='true';
+    mobileMenu.classList.toggle('show',!open);
+    menuToggle.setAttribute('aria-expanded',String(!open));
+  });
+  mobileMenu.addEventListener('click',event=>{if(event.target.closest('a,button'))closeMenu()});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
+}
+
+document.querySelectorAll('[data-machine-carousel]').forEach(carousel=>{
+  const slides=[...carousel.querySelectorAll('.machine-slide')];
+  const dotsWrap=carousel.querySelector('.machine-dots');
+  let current=0;
+  const dots=slides.map((_,index)=>{
+    const dot=document.createElement('button');
+    dot.className='machine-dot'+(index===0?' active':'');
+    dot.setAttribute('aria-label',`Show machine photo ${index+1} of ${slides.length}`);
+    dot.addEventListener('click',()=>show(index));
+    dotsWrap.appendChild(dot);
+    return dot;
+  });
+  function show(index){
+    current=(index+slides.length)%slides.length;
+    slides.forEach((slide,i)=>slide.classList.toggle('active',i===current));
+    dots.forEach((dot,i)=>dot.classList.toggle('active',i===current));
+  }
+  carousel.querySelector('[data-machine-prev]').addEventListener('click',()=>show(current-1));
+  carousel.querySelector('[data-machine-next]').addEventListener('click',()=>show(current+1));
+  let startX=0;
+  carousel.addEventListener('touchstart',event=>startX=event.changedTouches[0].clientX,{passive:true});
+  carousel.addEventListener('touchend',event=>{
+    const distance=event.changedTouches[0].clientX-startX;
+    if(Math.abs(distance)>45)show(current+(distance<0?1:-1));
+  },{passive:true});
+});
