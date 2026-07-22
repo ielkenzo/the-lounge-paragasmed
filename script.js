@@ -7,7 +7,10 @@ function closeChat(){chat.classList.remove('show')}
 function showToast(msg){toast.textContent=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)}
 booking.addEventListener('click',e=>{if(e.target===booking)closeBooking()});
 chat.addEventListener('click',e=>{if(e.target===chat)closeChat()});
-document.getElementById('bookingForm').addEventListener('submit',e=>{e.preventDefault();closeBooking();showToast('Appointment request saved in this demo ✓');e.target.reset()});
+window.addEventListener('message',e=>{
+  if(e.origin!=='https://calendly.com')return;
+  if(e.data?.event==='calendly.event_scheduled'){closeBooking();showToast('Appointment confirmed — check your email ✓')}
+});
 const replies=[
   [/sofwave|softwave/i,'Sofwave uses ultrasound energy to support collagen stimulation and non-invasive lifting. Suitability, settings and expected results require an in-person medical assessment.'],
   [/xerf|radiofrequency|rf/i,'XERF is a radiofrequency-based treatment designed for skin tightening and contouring. Treatment plans vary based on skin condition and goals.'],
@@ -16,7 +19,7 @@ const replies=[
   [/hair|exosome|pdrn/i,'Hair restoration starts with identifying the cause of shedding or thinning. Options may include medical treatment and regenerative protocols depending on assessment.'],
   [/downtime|recovery/i,'Downtime depends on the treatment. Many non-invasive procedures have minimal downtime, while some lasers may require several recovery days.'],
   [/price|cost|how much/i,'Pricing depends on the treatment area, number of sessions and personalized plan. The clinic can confirm pricing after assessment.'],
-  [/book|schedule|appointment/i,'Tap the gold Book button to submit an appointment request. In the production version, available slots and email reminders will be connected automatically.']
+  [/book|schedule|appointment/i,'Tap the gold Book button to see live availability and schedule instantly — you\'ll get an email confirmation right away.']
 ];
 document.getElementById('chatForm').addEventListener('submit',e=>{
   e.preventDefault();

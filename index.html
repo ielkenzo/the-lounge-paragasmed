@@ -118,7 +118,7 @@
     <div class="promo-copy">
       <div class="eyebrow">The Lounge experience</div>
       <h3>Premium care, thoughtfully delivered.</h3>
-      <p>This prototype combines marketing, booking and a guided chatbot experience. The next production phase can connect live calendars, automated email reminders, secure patient records, billing, invoicing and inventory.</p>
+      <p>This site combines marketing, real-time appointment booking and a guided chatbot experience. The next phase can add secure patient records, billing, invoicing and inventory.</p>
       <div class="trust">
         <div><strong>1:1</strong><span>Personalized consult</span></div>
         <div><strong>PWA</strong><span>Installable on mobile</span></div>
@@ -138,7 +138,7 @@
   <div class="footer-grid">
     <div><div class="brand"><div class="monogram">P</div><div><h1>The Lounge</h1><small>BY PARAGASMED</small></div></div><p>Premium skin and aesthetic dermatology in a calm, modern setting.</p></div>
     <div><h4>Explore</h4><a href="#machines">Laser machines</a><a href="#treatments">Technologies</a><a href="#services">Services</a><a href="#promotions">Promotions</a></div>
-    <div><h4>Prototype note</h4><p>Appointments and chat are simulated. No medical diagnosis is provided by this demo.</p></div>
+    <div><h4>Prototype note</h4><p>Appointment booking is live via Calendly; chat replies are simulated. No medical diagnosis is provided by this demo.</p></div>
   </div>
 </footer>
 </div>
@@ -154,16 +154,8 @@
 <div class="modal" id="booking">
   <div class="sheet">
     <div class="sheet-head"><div><div class="eyebrow">Appointment request</div><h3>Book a consultation</h3></div><button class="close" onclick="closeBooking()">×</button></div>
-    <form id="bookingForm" class="form-grid">
-      <div class="field"><label>Full name</label><input required placeholder="Your name"></div>
-      <div class="field"><label>Mobile number</label><input required placeholder="09xx xxx xxxx"></div>
-      <div class="field"><label>Email</label><input type="email" required placeholder="you@email.com"></div>
-      <div class="field"><label>Service</label><select required><option value="">Select treatment</option><option>Sofwave</option><option>XERF</option><option>Alma Harmony</option><option>Botox / Injectables</option><option>Hair Restoration</option><option>Medical Dermatology</option><option>Skin Boosters</option></select></div>
-      <div class="field"><label>Preferred date</label><input type="date" required></div>
-      <div class="field"><label>Preferred time</label><select required><option>10:00 AM</option><option>1:00 PM</option><option>3:00 PM</option><option>5:00 PM</option></select></div>
-      <div class="field full"><label>Concern or goal</label><textarea rows="3" placeholder="Tell us what you would like to improve"></textarea></div>
-      <div class="field full"><p class="notice">Prototype only: this form stores nothing and sends no email yet. A production version can connect to a secure booking backend and reminder service.</p><button class="btn btn-gold" type="submit">Submit request</button></div>
-    </form>
+    <p class="notice">Pick a slot below — you'll get an email confirmation right away.</p>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR-CALENDLY-USERNAME/consultation?hide_gdpr_banner=1&primary_color=d9b15f" style="min-width:280px;height:680px;"></div>
   </div>
 </div>
 
@@ -177,6 +169,7 @@
 
 <div class="toast" id="toast"></div>
 
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script src="script.js"></script>
 </body>
 </html>
