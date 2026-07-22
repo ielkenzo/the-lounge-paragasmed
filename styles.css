@@ -61,11 +61,16 @@ section{padding:84px 5vw}
 .tech-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:18px}
 .tech-card{min-height:430px;position:relative;border-radius:26px;overflow:hidden;background-size:cover;background-position:center;box-shadow:var(--shadow)}
 .tech-card:first-child{grid-row:span 2;min-height:620px}
+.tech-card.brand-product{background-color:#dfe3e8;background-repeat:no-repeat}
+.tech-card.ultherapy-card{background-size:contain;background-position:center 38%}
+.tech-card.rejuran-card{background-size:cover;background-position:center}
 .tech-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(7,26,51,.92) 100%)}
 .tech-copy{position:absolute;z-index:2;left:24px;right:24px;bottom:24px;color:white}
 .tech-copy small{color:var(--gold2);letter-spacing:.16em}
 .tech-copy h4{font-family:Georgia,serif;font-size:34px;margin:8px 0}
 .tech-copy p{color:#e5eaf0;line-height:1.5;margin:0}
+.brand-note{margin:18px 2px 0;color:var(--muted);font-size:11px;line-height:1.6}
+.brand-note a{color:var(--navy2);font-weight:700;text-underline-offset:3px}
 .services{background:var(--navy);color:white}
 .services .section-head p{color:#c4cfdd}
 .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
