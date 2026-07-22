@@ -1,0 +1,7 @@
+[
+  {"category":"NON-INVASIVE LIFTING","name":"Sofwave™","description":"Comfort-focused ultrasound designed to stimulate collagen with minimal downtime.","image":"assets/laser-treatment.jpg","classes":""},
+  {"category":"ADVANCED RF","name":"XERF","description":"Advanced radiofrequency for skin firmness and contouring.","image":"assets/aesthetic-clinic.jpg","classes":""},
+  {"category":"LASER PLATFORM","name":"Alma Harmony","description":"Versatile technology for tone, texture, vascular and pigmentation concerns.","image":"assets/laser-platform.jpg","classes":""},
+  {"category":"MICROFOCUSED ULTRASOUND","name":"Ultherapy PRIME®","description":"The Merz Aesthetics platform combines focused ultrasound energy with real-time visualization for personalized, non-invasive lifting.","image":"assets/ultherapy-prime.webp","classes":"brand-product ultherapy-card"},
+  {"category":"PN SKIN BOOSTER","name":"REJURAN® Skin Booster","description":"A PharmaResearch injectable skin-booster line formulated for physician-led regenerative skin protocols.","image":"assets/rejuran-skin-booster.jpg","classes":"brand-product rejuran-card"}
+]

@@ -1,0 +1,14 @@
+{
+  "welcome":"Welcome to The Lounge by ParagasMed. Ask about treatments, downtime, booking or consultation preparation.",
+  "fallback":"I can help with general treatment information and booking. For diagnosis, urgent concerns or personalized medical advice, please consult the clinic directly.",
+  "replies":[
+    {"keywords":["sofwave","softwave"],"answer":"Sofwave uses ultrasound energy to support collagen stimulation and non-invasive lifting. Suitability, settings and expected results require an in-person medical assessment."},
+    {"keywords":["xerf","radiofrequency","rf"],"answer":"XERF is a radiofrequency-based treatment designed for skin tightening and contouring. Treatment plans vary based on skin condition and goals."},
+    {"keywords":["alma","laser","pigment","acne mark"],"answer":"Alma Harmony is a versatile laser and light platform that may be used for concerns such as pigmentation, redness and texture. A dermatologist should determine the right module and settings."},
+    {"keywords":["botox","wrinkle","inject"],"answer":"Botox consultations review facial movement, goals, medical history and dosing. Results and duration vary by patient."},
+    {"keywords":["hair","exosome","pdrn"],"answer":"Hair restoration starts with identifying the cause of shedding or thinning. Options may include medical treatment and regenerative protocols depending on assessment."},
+    {"keywords":["downtime","recovery"],"answer":"Downtime depends on the treatment. Many non-invasive procedures have minimal downtime, while some lasers may require several recovery days."},
+    {"keywords":["price","cost","how much"],"answer":"Pricing depends on the treatment area, number of sessions and personalized plan. The clinic can confirm pricing after assessment."},
+    {"keywords":["book","schedule","appointment"],"answer":"Tap the gold Book button to submit an appointment request. In the production version, available slots and email reminders will be connected automatically."}
+  ]
+}
