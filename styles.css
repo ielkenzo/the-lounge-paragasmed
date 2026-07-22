@@ -54,6 +54,9 @@ section{padding:84px 5vw}
 .machine-focus{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
 .machine-focus span{font-size:11px;padding:7px 9px;border-radius:9px;background:rgba(255,255,255,.1);color:#edf3f8}
 .laser-note{margin-top:18px;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);color:#cbd6e2;line-height:1.6;font-size:13px}
+.laser-note span{display:block}
+.photo-credit{margin-top:8px;color:#9fb0c3;font-size:11px}
+.photo-credit a{color:var(--gold2);text-decoration-color:rgba(241,213,143,.5);text-underline-offset:3px}
 
 .tech-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:18px}
 .tech-card{min-height:430px;position:relative;border-radius:26px;overflow:hidden;background-size:cover;background-position:center;box-shadow:var(--shadow)}
