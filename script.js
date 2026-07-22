@@ -8,7 +8,7 @@ function showToast(msg){toast.textContent=msg;toast.classList.add('show');setTim
 booking.addEventListener('click',e=>{if(e.target===booking)closeBooking()});
 chat.addEventListener('click',e=>{if(e.target===chat)closeChat()});
 document.getElementById('bookingForm').addEventListener('submit',e=>{e.preventDefault();closeBooking();showToast('Appointment request saved in this demo ✓');e.target.reset()});
-const replies=[
+let replies=[
   [/sofwave|softwave/i,'Sofwave uses ultrasound energy to support collagen stimulation and non-invasive lifting. Suitability, settings and expected results require an in-person medical assessment.'],
   [/xerf|radiofrequency|rf/i,'XERF is a radiofrequency-based treatment designed for skin tightening and contouring. Treatment plans vary based on skin condition and goals.'],
   [/alma|laser|pigment|acne mark/i,'Alma Harmony is a versatile laser and light platform that may be used for concerns such as pigmentation, redness and texture. A dermatologist should determine the right module and settings.'],
@@ -18,13 +18,23 @@ const replies=[
   [/price|cost|how much/i,'Pricing depends on the treatment area, number of sessions and personalized plan. The clinic can confirm pricing after assessment.'],
   [/book|schedule|appointment/i,'Tap the gold Book button to submit an appointment request. In the production version, available slots and email reminders will be connected automatically.']
 ];
+let chatbotFallback='I can help with general treatment information and booking. For diagnosis, urgent concerns or personalized medical advice, please consult the clinic directly.';
+fetch('data/chatbot.json',{headers:{Accept:'application/json'}}).then(response=>{
+  if(!response.ok)throw new Error('Chatbot content unavailable');
+  return response.json();
+}).then(config=>{
+  replies=config.replies.map(item=>[new RegExp(item.keywords.map(keyword=>keyword.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|'),'i'),item.answer]);
+  chatbotFallback=config.fallback;
+  const welcome=document.querySelector('#chatBody .bot');
+  if(welcome)welcome.textContent=config.welcome;
+}).catch(error=>console.info('Using built-in chatbot content fallback.',error.message));
 document.getElementById('chatForm').addEventListener('submit',e=>{
   e.preventDefault();
   const input=document.getElementById('chatInput'),q=input.value.trim();
   if(!q)return;
   addBubble(q,'user');input.value='';
   setTimeout(()=>{
-    let answer='I can help with general treatment information and booking. For diagnosis, urgent concerns or personalized medical advice, please consult the clinic directly.';
+    let answer=chatbotFallback;
     for(const [r,a] of replies){if(r.test(q)){answer=a;break}}
     addBubble(answer,'bot')
   },450)
@@ -40,7 +50,7 @@ document.getElementById('installBtn').addEventListener('click',async()=>{
   if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null}
   else showToast('On iPhone: Share → Add to Home Screen')
 });
-if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
+if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 const menuToggle=document.querySelector('[data-menu-toggle]');
 const mobileMenu=document.querySelector('[data-mobile-menu]');
 if(menuToggle&&mobileMenu){
@@ -54,7 +64,8 @@ if(menuToggle&&mobileMenu){
   document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
 }
 
-document.querySelectorAll('[data-machine-carousel]').forEach(carousel=>{
+function initMachineCarousels(){document.querySelectorAll('[data-machine-carousel]:not([data-initialized])').forEach(carousel=>{
+  carousel.dataset.initialized='true';
   const slides=[...carousel.querySelectorAll('.machine-slide')];
   const dotsWrap=carousel.querySelector('.machine-dots');
   let current=0;
@@ -79,4 +90,6 @@ document.querySelectorAll('[data-machine-carousel]').forEach(carousel=>{
     const distance=event.changedTouches[0].clientX-startX;
     if(Math.abs(distance)>45)show(current+(distance<0?1:-1));
   },{passive:true});
-});
+});}
+initMachineCarousels();
+document.addEventListener('content:updated',initMachineCarousels);

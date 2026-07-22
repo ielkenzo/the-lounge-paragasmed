@@ -1,4 +1,5 @@
-document.querySelectorAll('[data-carousel]').forEach(carousel=>{
+function initCarousels(){document.querySelectorAll('[data-carousel]:not([data-initialized])').forEach(carousel=>{
+  carousel.dataset.initialized='true';
   const slides=[...carousel.querySelectorAll('.slide')];
   const dotsWrap=carousel.querySelector('.dots');
   let current=0;
@@ -27,7 +28,9 @@ document.querySelectorAll('[data-carousel]').forEach(carousel=>{
     const distance=event.changedTouches[0].clientX-startX;
     if(Math.abs(distance)>45)show(current+(distance<0?1:-1));
   },{passive:true});
-});
+});}
+initCarousels();
+document.addEventListener('content:updated',initCarousels);
 
 const menuToggle=document.querySelector('[data-menu-toggle]');
 const mobileMenu=document.querySelector('[data-mobile-menu]');
