@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071a33">
+  <meta name="description" content="Meet Dr. Michael Paragas and learn what ParagasMed and The Lounge stand for — physician-led dermatology and aesthetic medicine in Calasiao, Ortigas and Alabang.">
+  <title>About | The Lounge by ParagasMed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config={theme:{extend:{colors:{navy:'#071a33',navy2:'#0d294e',gold:'#d9b15f',gold2:'#f1d58f',cream:'#f7f3eb',ink:'#142238',muted:'#6e7888'},fontFamily:{serif:['Georgia','serif']},boxShadow:{lounge:'0 20px 50px rgba(7,26,51,.14)'}}}}
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      html{@apply scroll-smooth} body{@apply m-0 bg-cream text-ink antialiased}
+    }
+    @layer components {
+      .app{@apply mx-auto min-h-screen max-w-[1240px] bg-cream}.topbar{@apply sticky top-0 z-30 flex h-[74px] items-center justify-between border-b border-white/10 bg-navy/95 px-[5vw] text-white backdrop-blur-xl max-sm:h-[68px] max-sm:px-[18px]}
+      .brand{@apply flex items-center gap-3 text-white no-underline}.monogram{@apply grid h-[42px] w-[42px] place-items-center rounded-full border border-gold font-serif text-2xl text-gold}.brand h1{@apply m-0 font-serif text-xl font-normal}.brand small{@apply mt-1 block text-[9px] tracking-[.18em] text-[#d7c59a]}
+      .desktop-nav{@apply ml-auto hidden items-center gap-6 md:flex}.desktop-nav a{@apply border-b-2 border-transparent py-2.5 text-[13px] font-bold text-[#dbe4ee] no-underline transition hover:border-gold hover:text-gold2}.desktop-nav a.active{@apply border-gold text-gold2}.desktop-nav .nav-cta{@apply ml-1 rounded-xl border-0 bg-gold px-4 py-3 text-navy hover:text-navy}
+      .menu-toggle{@apply grid h-11 w-11 place-content-center rounded-xl border-0 bg-white/10 p-3 md:hidden}.menu-toggle span{@apply my-[2px] block h-0.5 w-5 rounded bg-white transition}.menu-toggle[aria-expanded="true"] span:first-child{@apply translate-y-[6px] rotate-45}.menu-toggle[aria-expanded="true"] span:nth-child(2){@apply opacity-0}.menu-toggle[aria-expanded="true"] span:last-child{@apply -translate-y-[6px] -rotate-45}.mobile-menu{@apply fixed left-0 right-0 top-[74px] z-20 hidden max-h-[calc(100dvh-74px)] overflow-y-auto bg-navy/95 px-[18px] pb-6 pt-3 shadow-2xl backdrop-blur-xl md:hidden max-sm:top-[68px] max-sm:max-h-[calc(100dvh-68px)]}.mobile-menu.show{@apply grid}.mobile-menu a{@apply border-b border-white/10 px-1 py-4 font-bold text-white no-underline}.mobile-menu .nav-cta{@apply mt-3 rounded-xl border-0 bg-gold px-4 py-3 text-center text-navy}
+      .eyebrow{@apply text-xs font-bold uppercase tracking-[.22em] text-gold2}
+      .about-hero{@apply flex min-h-[480px] flex-col justify-end px-[5vw] pb-[70px] pt-[140px] text-white max-sm:min-h-[540px] max-sm:px-[18px] max-sm:pb-14 max-sm:pt-[130px]}.about-hero h2{@apply my-4 font-serif text-[clamp(44px,6vw,78px)] font-normal leading-[1.02]}.about-hero h2 span{@apply text-gold2}.about-hero p{@apply max-w-[660px] text-lg leading-[1.7] text-[#dbe4ee] max-sm:text-[15px]}
+      .doctor{@apply px-[5vw] py-[84px] max-sm:px-[18px] max-sm:py-16}.doctor-grid{@apply grid grid-cols-1 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start}
+      .doctor-photo{@apply relative overflow-hidden rounded-[28px] shadow-lounge}.doctor-photo img{@apply block aspect-[4/5] w-full object-cover object-top}.doctor-photo figcaption{@apply absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/95 via-navy/40 to-transparent px-6 pb-6 pt-16 text-white}.doctor-photo figcaption b{@apply block font-serif text-2xl font-normal}.doctor-photo figcaption span{@apply mt-1 block text-xs uppercase tracking-[.14em] text-gold2}
+      .doctor-copy .eyebrow{@apply text-[#a66f17]}.doctor-copy h3{@apply mb-4 mt-2 font-serif text-[clamp(34px,4vw,50px)] font-normal leading-[1.05]}.doctor-copy>p{@apply text-[15px] leading-[1.8] text-muted}
+      .tag-row{@apply mt-6 flex flex-wrap gap-2}.tag{@apply inline-flex rounded-full border border-navy/15 bg-navy/5 px-3 py-[7px] text-[11px] font-bold text-navy2}
+      .cred-grid{@apply mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2}.cred-card{@apply rounded-[18px] border border-[#ece8df] bg-white p-5 shadow-[0_8px_25px_rgba(7,26,51,.06)]}.cred-card h4{@apply m-0 mb-3 font-serif text-lg font-normal text-navy}.cred-card ul{@apply m-0 list-disc space-y-1.5 pl-[18px] text-sm leading-[1.6] text-muted}
+      .social-row{@apply mt-7 flex flex-wrap gap-3}.social-row a{@apply inline-flex items-center gap-2 rounded-xl border border-navy/15 bg-white px-4 py-3 text-sm font-bold text-navy2 no-underline shadow-[0_6px_18px_rgba(7,26,51,.06)] transition hover:border-gold hover:text-navy}
+      .section-head{@apply mb-[30px] flex items-end justify-between gap-5 max-sm:block}.section-head h3{@apply mt-2 font-serif text-[clamp(34px,5vw,54px)] font-normal}.section-head p{@apply max-w-[500px] leading-[1.7] text-muted}
+      .mission{@apply bg-navy px-[5vw] py-[84px] text-white max-sm:px-[18px] max-sm:py-16}.mission .section-head p{@apply text-[#c4cfdd]}.mission-grid{@apply grid grid-cols-3 gap-4 max-[900px]:grid-cols-1}.mission-card{@apply min-h-[220px] rounded-[22px] border border-white/10 p-7}.mission-icon{@apply text-[28px] text-gold}.mission-card h4{@apply mb-2.5 mt-[18px] font-serif text-[24px] font-normal}.mission-card p{@apply leading-[1.6] text-[#c5d0dc]}
+      .locations{@apply px-[5vw] py-[84px] max-sm:px-[18px] max-sm:py-16}.locations-grid{@apply mt-8 grid grid-cols-1 gap-5 md:grid-cols-3}.location-card{@apply rounded-[22px] border border-[#ece8df] bg-white p-6 shadow-[0_8px_25px_rgba(7,26,51,.06)]}.location-card h4{@apply mt-2 font-serif text-xl font-normal text-navy}.location-card p{@apply mt-2 text-sm leading-[1.6] text-muted}
+      .consult-banner{@apply m-0 flex flex-col items-start justify-between gap-10 bg-navy2 px-[5vw] py-[84px] text-white lg:flex-row lg:items-center max-sm:px-5 max-sm:py-[60px]}.consult-banner>div{@apply max-w-[780px]}.consult-banner h3{@apply mt-2.5 font-serif text-[clamp(32px,5vw,50px)] font-normal}.consult-banner p{@apply leading-[1.7] text-[#c5d0dc]}.btn{@apply inline-block cursor-pointer rounded-2xl border-0 px-5 py-[15px] font-bold no-underline}.btn-gold{@apply whitespace-nowrap bg-gold text-navy shadow-[0_14px_35px_rgba(217,177,95,.26)]}
+      .footer{@apply bg-[#041225] px-[5vw] py-12 text-white max-sm:pb-[130px]}.footer-grid{@apply grid grid-cols-1 gap-7 md:grid-cols-[1.3fr_1fr_1fr]}.footer p,.footer a{@apply text-[#b9c6d4]}.footer a{@apply my-2 block no-underline}.image-license{@apply mb-0 mt-9 border-t border-white/10 pt-5 text-[11px]}.image-license a{@apply inline text-gold2}
+      .bottom-nav{@apply fixed bottom-3 left-1/2 z-30 hidden w-[min(94%,620px)] -translate-x-1/2 grid-cols-5 rounded-[22px] border border-navy/10 bg-white/95 p-2 shadow-[0_18px_50px_rgba(7,26,51,.25)] backdrop-blur-xl max-sm:grid}.bottom-nav a{@apply px-1 py-2 text-center text-[10px] text-muted no-underline}.bottom-nav b{@apply mb-0.5 block text-xl text-navy}.bottom-nav .active{@apply font-bold text-navy}.bottom-nav .book-fab{@apply -mt-[30px] grid h-[58px] w-[58px] place-items-center justify-self-center rounded-full bg-gold text-[26px] text-navy shadow-[0_12px_30px_rgba(217,177,95,.45)]}
+    }
+    .about-hero{background:linear-gradient(110deg,rgba(4,18,37,.97),rgba(7,26,51,.85) 55%,rgba(7,26,51,.45)),url('assets/treatments/7108173.jpg') center 30%/cover}
+  </style>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <a class="brand" href="index.html" aria-label="The Lounge home"><div class="monogram">P</div><div><h1>The Lounge</h1><small>BY PARAGASMED</small></div></a>
+  <nav class="desktop-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="treatments.html">Treatments</a><a href="index.html#machines">Technology</a><a class="active" href="about.html" aria-current="page">About</a><a class="nav-cta" href="index.html#home">Book consultation</a></nav>
+  <button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation"><span></span><span></span><span></span></button>
+</header>
+<nav class="mobile-menu" id="mobileMenu" data-mobile-menu aria-label="Mobile navigation"><a href="index.html">Home</a><a href="treatments.html">Treatments & procedures</a><a href="index.html#machines">Technology</a><a href="about.html">About</a><a class="nav-cta" href="index.html#home">Book consultation</a></nav>
+
+<main>
+  <section class="about-hero">
+    <div class="eyebrow">The people behind The Lounge</div>
+    <h2>Physician-led care.<br><span>Boutique experience.</span></h2>
+    <p>The Lounge by ParagasMed is the aesthetic arm of ParagasMed — a dermatology and cosmetic surgery practice founded by Dr. Michael Paragas to bring proper diagnosis and modern technology together under one roof.</p>
+  </section>
+
+  <section class="doctor" id="doctor">
+    <div class="doctor-grid">
+      <figure class="doctor-photo">
+        <img src="assets/dr-paragas.jpg" alt="Dr. Michael C. Paragas, MD, in a white coat" loading="lazy">
+        <figcaption><b>Michael C. Paragas, MD</b><span>Dermatology · Cosmetic Surgery · Aesthetic Medicine</span></figcaption>
+      </figure>
+      <div class="doctor-copy">
+        <div class="eyebrow">Meet the physician</div>
+        <h3>Dr. Michael Paragas</h3>
+        <p>Dr. Michael C. Paragas is a Philippine-licensed physician practicing clinical and aesthetic dermatology and cosmetic surgery. He earned his medical degree from Our Lady of Fatima University in 2018 and passed the Physician Licensure Examination in 2019, going on to complete fellowship training in cosmetic surgery and clinical & aesthetic dermatology.</p>
+        <p>He founded ParagasMed in Calasiao, Pangasinan, and later opened The Lounge Clinic locations in Ortigas and at Civic Place, Alabang — extending the same physician-led approach to patients in Metro Manila.</p>
+        <div class="tag-row">
+          <span class="tag">Acne, Rosacea & Eczema</span>
+          <span class="tag">Acne Marks & Scars</span>
+          <span class="tag">Anti-Aging</span>
+          <span class="tag">Botox, Fillers & Threads</span>
+          <span class="tag">Hair Dermatology</span>
+          <span class="tag">Skin Allergy & Infection</span>
+        </div>
+        <div class="cred-grid">
+          <div class="cred-card">
+            <h4>Education</h4>
+            <ul>
+              <li>Doctor of Medicine — Our Lady of Fatima University, 2018</li>
+              <li>Physician Licensure Examination, 2019</li>
+            </ul>
+          </div>
+          <div class="cred-card">
+            <h4>Fellowship training</h4>
+            <ul>
+              <li>Cosmetic Surgery — Pan Pacific Aesthetic Institute, 2023</li>
+              <li>Clinical & Aesthetic Dermatology — Medical Skin Health Training Foundation, 2025</li>
+            </ul>
+          </div>
+          <div class="cred-card">
+            <h4>Certifications</h4>
+            <ul>
+              <li>American Academy of Aesthetic Medicine (AAAM), 2024</li>
+              <li>IFAAS — International Fellowship in Advanced Aesthetic Surgery, 2024</li>
+            </ul>
+          </div>
+          <div class="cred-card">
+            <h4>Professional affiliations</h4>
+            <ul>
+              <li>Pan Pacific Aesthetic Institute</li>
+              <li>Philippine College of Occupational Health</li>
+              <li>Medical Skin Health Foundation Inc.</li>
+              <li>Philippine Peptide Society</li>
+            </ul>
+          </div>
+        </div>
+        <div class="social-row" aria-label="Dr. Michael Paragas on social media">
+          <a href="https://www.facebook.com/profile.php?id=61567184429557" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/paragas_med" target="_blank" rel="noopener">Instagram @paragas_med</a>
+          <a href="https://www.tiktok.com/@paragasmed" target="_blank" rel="noopener">TikTok @paragasmed</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mission" id="mission">
+    <div class="section-head">
+      <div><div class="eyebrow">Our purpose</div><h3>What ParagasMed is built for</h3></div>
+      <p>ParagasMed exists on the idea that cosmetic goals and medical skin health shouldn't be treated as separate problems — every plan starts with an accurate diagnosis.</p>
+    </div>
+    <div class="mission-grid">
+      <article class="mission-card"><div class="mission-icon">✧</div><h4>Diagnosis before treatment</h4><p>Acne, hair loss, rashes and lesions are medical concerns first. Dr. Paragas examines and diagnoses before any cosmetic or energy-based procedure is recommended.</p></article>
+      <article class="mission-card"><div class="mission-icon">⌁</div><h4>Evidence-based aesthetics</h4><p>Injectables, skin boosters and laser or energy-based devices are chosen to fit the diagnosis and skin type — not simply the latest trend.</p></article>
+      <article class="mission-card"><div class="mission-icon">◇</div><h4>A calmer clinic experience</h4><p>The Lounge takes that same medical foundation and delivers it in a private, unhurried, boutique-style setting built around the patient.</p></article>
+    </div>
+  </section>
+
+  <section class="locations" id="locations">
+    <div class="section-head"><div><div class="eyebrow">Where to find us</div><h3>ParagasMed & The Lounge clinics</h3></div><p>Three clinics and an online option, all under the same physician-led standard of care.</p></div>
+    <div class="locations-grid">
+      <article class="location-card"><div class="eyebrow">Flagship clinic</div><h4>ParagasMed — Calasiao</h4><p>Midtown Tower, Calasiao, Pangasinan. General and medical dermatology alongside aesthetic and cosmetic procedures.</p></article>
+      <article class="location-card"><div class="eyebrow">The Lounge</div><h4>Ortigas</h4><p>The Lounge Clinic Ortigas brings the same aesthetic dermatology and cosmetic services to Metro Manila patients.</p></article>
+      <article class="location-card"><div class="eyebrow">The Lounge</div><h4>Civic Place, Alabang</h4><p>Civic Drive, Muntinlupa. Walk-in and appointment slots for laser, injectable and skin-quality treatments.</p></article>
+    </div>
+  </section>
+
+  <section class="consult-banner"><div><div class="eyebrow">Ready to meet the team?</div><h3>Start with a proper consultation.</h3><p>Bring your current products, medication list and any prior procedure history so Dr. Paragas can build a plan around your diagnosis and goals.</p></div><a class="btn btn-gold" href="index.html#home">Request a consultation</a></section>
+</main>
+
+<footer class="footer"><div class="footer-grid"><div><div class="brand"><div class="monogram">P</div><div><h1>The Lounge</h1><small>BY PARAGASMED</small></div></div><p>Premium skin and aesthetic dermatology in a calm, modern setting.</p></div><div><h4>Explore</h4><a href="index.html">Home</a><a href="treatments.html">Treatments</a><a href="index.html#machines">Technology</a><a href="about.html">About</a></div><div><h4>Medical note</h4><p>This page summarizes publicly available professional information and does not replace an in-clinic consultation.</p></div></div><p class="image-license">Dr. Paragas's photo is his publicly listed professional profile photo, linked from his official <a href="https://www.facebook.com/profile.php?id=61567184429557" target="_blank" rel="noopener">Facebook</a> and <a href="https://www.instagram.com/paragas_med" target="_blank" rel="noopener">Instagram</a> pages via his <a href="https://seriousmd.com/doc/michael-paragas" target="_blank" rel="noopener">SeriousMD provider profile</a>. Other photography from Pexels, used under the <a href="https://www.pexels.com/license/" target="_blank" rel="noopener">Pexels License</a>.</p></footer>
+</div>
+<nav class="bottom-nav" aria-label="Mobile navigation"><a href="index.html"><b>⌂</b>Home</a><a href="treatments.html"><b>◇</b>Treatments</a><a class="book-fab" href="index.html#home" aria-label="Book consultation">+</a><a class="active" href="about.html" aria-current="page"><b>✦</b>About</a><a href="index.html#machines"><b>◈</b>Technology</a></nav>
+<script src="treatments.js"></script>
+</body>
+</html>
